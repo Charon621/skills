@@ -6,11 +6,36 @@
 
 ## 技能列表
 
-| 技能 | 类别 | 说明 |
+### 📝 学术写作与去 AI
+
+| 技能 | 说明 | 来源 |
 |------|------|------|
-| `humanize-academic-writing` | 学术写作 | 学术文本去 AI 痕迹，改写为自然的人类学术表达（含 AI 特征检测脚本） |
-| `vetai-project-context` | 项目 | VetAI 宠物皮肤初筛小程序的项目背景、结构、测试与约定速查 |
-| `vetai-evaluation` | 项目 | VetAI 评估体系（gold_standard / V1 参考集 / 探针工具链）使用方法与边界 |
+| `humanize-academic-writing` | 学术文本去 AI 痕迹，改写为自然的人类学术表达（含 AI 特征检测脚本） | 自装 |
+| `research-paper-writing` | 论文写作辅助 | 预装 |
+| `academic-writing-assistant` | 学术写作：段落组织、语言润色、论文结构 | 社区 |
+| `citation-management` | BibTeX 引用管理：Semantic Scholar 补引、cite key 校验、去重、格式化 | 社区 |
+
+### 🔬 生命科学与医学
+
+| 技能 | 说明 | 来源 |
+|------|------|------|
+| `biology` | 生物学科普/讲解（按学习者水平适配） | 社区 |
+| `arxiv-search` | arXiv 论文检索 | 社区（OpenClaw-Medical-Skills） |
+| `bgpt-paper-search` | 论文检索 | 社区（OpenClaw-Medical-Skills） |
+
+### 🐾 兽医与统计
+
+| 技能 | 说明 | 来源 |
+|------|------|------|
+| `veterinary` | 兽医知识：宠物护理到临床实践与研究 | 社区 |
+| `statistics` | 统计学：从基础概率到高级方法 | 社区 |
+
+### 🐶 VetAI 项目专用
+
+| 技能 | 说明 |
+|------|------|
+| `vetai-project-context` | VetAI 项目速查：结构、测试命令、代码约定、输出规则 |
+| `vetai-evaluation` | 评估工具链：三层参考标准、指标口径、不可越过的边界 |
 
 ## 安装方法
 
@@ -37,4 +62,5 @@ git clone https://github.com/Charon621/skills.git
 
 - `SKILL.md` 使用 YAML frontmatter：`name`、`description`
 - 脚本放 `scripts/`，参考资料放 `references/`，模板放 `templates/`
+- 社区技能保留原作者 frontmatter（`metadata`、license 字段原样保留）
 - 仓库内不存放任何 API Key 或敏感信息
