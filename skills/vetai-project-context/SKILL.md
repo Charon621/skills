@@ -32,7 +32,7 @@ description: VetAI 宠物皮肤初筛小程序项目背景、结构、测试命�
 - 预检先回 → 烂图拦截（quality=unclear 或 diagnosabilityScore<40 立即拒答重拍）
 - 口腔/黏膜 case → 清空皮肤库归因
 - 完整诊断 → `parseModelJson` 5 层容错 → `normalizeDiagnosis`（护栏+置信度校准+清洗）→ 预检特征重算 KB 归因 + 覆盖一致性检查
-- 快路径 `VISION_RAG_FAST_PATH` 默认冻结
+- 快路径 `VISION_RAG_FAST_PATH` 已启用（BUG-G8）：预检强命中 KB（score≥8+症状≥2+top2 间隔≥3+组合规则/别名/3 非泛词视觉特征）时 ~3-5s 直接出报告，不等 plus；未达标准退回完整诊断
 
 ## 常用命令
 
@@ -59,6 +59,11 @@ node evaluation/tools/recall_probe.js   # 24条口语主诉召回探测
 
 ## 已知注意点
 
+- **代码包大小**：evaluation/（含 8.5M 数据集图片）必须保持在 project.config.json 的 packOptions.ignore 里，否则主包 10MB 超 2048KB 限制无法上传（2026-07-31 已配置 evaluation/tests/tools/docs/node_modules/*.md/*.py 忽略，主包 ~632KB）。新增大型目录后先查打包大小
 - 云函数修改后需在微信开发者工具手动"上传并部署"，Git 推送不会自动同步
 - 未提交状态常见：改动前先 `git status` 确认
 - 测试是纯 node assert 脚本（无 jest/mocha），直接 `node tests/xxx.test.js` 单跑也行
+- 对话状态机 BUG-C7（2026-07-31 修）：名字缺失时 getReaskQuickReplies 必须返回 []（不得给性别/类型选项误导）；fallbackExtractInfo 排除单字性别词与症状句当名字；「跳过」→ 名字占位「宝贝」/主诉中立占位；PHOTO 阶段补充描述合并进 complaint；initSession 恢复草稿时用 createEmptyDraft 补齐缺失字段（防旧草稿 TypeError 卡死 _isProcessing）
+- 本机空间资料 BUG-C9（2026-07-31 修）：storage.updateUser() 改昵称/头像（id 不变、knownUsers 同步、访客返回 null）；「我的」页头像点按换头像（prepareImages 落盘本地文件）、昵称旁「改名」按钮（重名检查排除自身）。空间入口在「我的→开发者选项→切换/新建本机空间」
+- 单条记录删除 BUG-C8（2026-07-31 修）：档案时间线每条记录右侧 × 按钮 → storage.deleteRecord(id)；此前只有清空全部
+- 对话链路对 AI 可用性敏感：AI 掉线时 GREETING 完整介绍句（无"叫"字）提取不到名字，用户需再答一次名字或用「跳过」
