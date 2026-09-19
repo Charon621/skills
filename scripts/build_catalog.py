@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build searchable catalog pages for the flat skills collection."""
+"""Build searchable catalog pages for the category-organized skills collection."""
 
 from __future__ import annotations
 
@@ -43,98 +43,73 @@ def first_sentence(text: str) -> str:
     return text[:180] + ("…" if len(text) > 180 else "")
 
 
-CATEGORY_MEMBERS = {
-    "学术写作与出版": {
-        "academic-paper", "academic-paper-reviewer", "academic-paper-workflow", "academic-pipeline", "academic-plotting",
-        "academic-writing-assistant", "citation-management", "cn-academic-paper-standards",
-        "humanize-academic-writing", "ml-paper-writing", "nature-citation", "nature-data",
-        "nature-experiment-log", "nature-figure", "nature-paper2ppt", "nature-polishing",
-        "nature-ref-verifier", "nature-response", "nature-reviewer", "nature-shared",
-        "nature-statistics", "nature-writing", "presenting-conference-talks",
-        "research-paper-writing", "researchwrite", "systems-paper-writing",
-    },
-    "文献检索与研究": {
-        "arxiv-search", "autoresearch", "bgpt-paper-search", "brainstorming-research-ideas",
-        "creative-thinking-for-research", "deep-research", "nature-academic-search",
-        "nature-downloader", "nature-literature-pipeline", "nature-paper-card", "nature-reader",
-    },
-    "研究记录与知识产物": {
-        "ara-compiler", "ara-research-manager", "ara-rigor-reviewer",
-    },
-    "模型评测、安全与可观测": {
-        "constitutional-ai", "evaluating-code-models", "evaluating-llms-harness",
-        "experiment-tracking-swanlab", "langsmith-observability", "llamaguard", "mlflow",
-        "nemo-evaluator-sdk", "nemo-guardrails", "phoenix-observability", "prompt-guard",
-        "tensorboard", "weights-and-biases",
-    },
-    "训练、微调与强化学习": {
-        "axolotl", "deepspeed", "distributed-llm-pretraining-torchtitan",
-        "fine-tuning-with-trl", "grpo-rl-training", "huggingface-accelerate", "llama-factory",
-        "miles-rl-training", "ml-training-recipes", "moe-training", "openrlhf-training",
-        "peft-fine-tuning", "pytorch-fsdp2", "pytorch-lightning", "ray-train", "simpo-training",
-        "slime-rl-training", "torchforge-rl-training", "training-llms-megatron", "unsloth",
-        "verl-rl-training",
-    },
-    "模型结构、压缩与可解释性": {
-        "implementing-llms-litgpt", "knowledge-distillation", "long-context", "mamba-architecture",
-        "model-merging", "model-pruning", "nanogpt", "nnsight-remote-interpretability",
-        "pyvene-interventions", "rwkv-architecture", "sparse-autoencoder-training",
-        "transformer-lens-interpretability",
-    },
-    "推理、量化与部署": {
-        "awq-quantization", "gguf-quantization", "gptq", "hqq-quantization", "llama-cpp",
-        "optimizing-attention-flash", "quantizing-models-bitsandbytes", "serving-llms-vllm",
-        "sglang", "speculative-decoding", "tensorrt-llm",
-    },
-    "云算力与基础设施": {
-        "lambda-labs-gpu-cloud", "modal-serverless-gpu", "skypilot-multi-cloud-orchestration",
-    },
-    "RAG、Agent与结构化输出": {
-        "autogpt-agents", "chroma", "crewai-multi-agent", "dspy", "evolving-ai-agents",
-        "faiss", "guidance", "instructor", "langchain", "llamaindex", "outlines", "pinecone",
-        "qdrant-vector-search", "sentence-transformers",
-    },
-    "数据处理与分词": {
-        "huggingface-tokenizers", "nemo-curator", "ray-data", "sentencepiece",
-    },
-    "多模态、机器人与媒体": {
-        "audiocraft-audio-generation", "blip-2-vision-language", "clip", "evaluating-cosmos-policy",
-        "fine-tuning-openvla-oft", "fine-tuning-serving-openpi", "llava", "segment-anything-model",
-        "stable-diffusion-image-generation", "whisper",
-    },
-    "生物医学与统计": {"biology", "statistics", "veterinary"},
-    "专利与职业": {"nature-paper-to-patent", "patent-disclosure-skill", "resume-master"},
-    "项目专用": {"vetai-evaluation", "vetai-project-context"},
+CATEGORY_ORDER = [
+    "nature-suite", "paper-writing", "research-workflow",
+    "fine-tuning", "rl-training", "training-infra",
+    "quantization-compression", "inference-serving", "model-architecture",
+    "rag-vector", "agent-frameworks", "multimodal-media", "robotics",
+    "interpretability", "evaluation-benchmarks", "safety-guardrails",
+    "observability-tracking", "data-engineering", "gpu-cloud",
+    "domain-science", "productivity", "project-vetai",
+]
+
+CATEGORY_LABELS = {
+    "nature-suite": "Nature 论文套件",
+    "paper-writing": "论文写作与投稿",
+    "research-workflow": "文献检索与研究流程",
+    "fine-tuning": "微调与对齐训练",
+    "rl-training": "强化学习训练",
+    "training-infra": "分布式训练基础设施",
+    "quantization-compression": "量化、压缩与合并",
+    "inference-serving": "推理部署与加速",
+    "model-architecture": "模型架构与分词",
+    "rag-vector": "RAG 与向量检索",
+    "agent-frameworks": "Agent 框架与结构化输出",
+    "multimodal-media": "多模态与媒体生成",
+    "robotics": "机器人与具身策略",
+    "interpretability": "可解释性研究",
+    "evaluation-benchmarks": "模型评测",
+    "safety-guardrails": "安全与护栏",
+    "observability-tracking": "实验跟踪与可观测",
+    "data-engineering": "数据处理与清洗",
+    "gpu-cloud": "云算力平台",
+    "domain-science": "学科知识",
+    "productivity": "职业与效率",
+    "project-vetai": "项目专用（VetAI）",
 }
 
 CATEGORY_TAGS = {
-    "学术写作与出版": ["论文", "投稿"],
-    "文献检索与研究": ["查论文", "研究"],
-    "研究记录与知识产物": ["研究记录"],
-    "模型评测、安全与可观测": ["评测", "安全"],
-    "训练、微调与强化学习": ["训练", "微调"],
-    "模型结构、压缩与可解释性": ["模型研究"],
-    "推理、量化与部署": ["部署", "推理"],
-    "云算力与基础设施": ["算力"],
-    "RAG、Agent与结构化输出": ["RAG", "Agent"],
-    "数据处理与分词": ["数据"],
-    "多模态、机器人与媒体": ["图像", "音视频"],
-    "生物医学与统计": ["生命科学"],
-    "专利与职业": ["专利", "简历"],
-    "项目专用": ["VetAI"],
+    "nature-suite": ["论文", "Nature"],
+    "paper-writing": ["论文", "投稿"],
+    "research-workflow": ["查论文", "研究"],
+    "fine-tuning": ["微调"],
+    "rl-training": ["强化学习"],
+    "training-infra": ["训练", "分布式"],
+    "quantization-compression": ["量化", "压缩"],
+    "inference-serving": ["部署", "推理"],
+    "model-architecture": ["模型研究"],
+    "rag-vector": ["RAG", "向量检索"],
+    "agent-frameworks": ["Agent", "结构化输出"],
+    "multimodal-media": ["图像", "音视频"],
+    "robotics": ["机器人"],
+    "interpretability": ["可解释性"],
+    "evaluation-benchmarks": ["评测"],
+    "safety-guardrails": ["安全"],
+    "observability-tracking": ["实验记录"],
+    "data-engineering": ["数据"],
+    "gpu-cloud": ["算力"],
+    "domain-science": ["生命科学"],
+    "productivity": ["简历"],
+    "project-vetai": ["VetAI"],
 }
 
-NAME_TO_CATEGORY = {
-    name: category for category, names in CATEGORY_MEMBERS.items() for name in names
-}
 
-
-def classify(name: str, description: str) -> tuple[str, list[str]]:
-    del description
-    category = NAME_TO_CATEGORY.get(name)
-    if not category:
-        raise ValueError(f"unclassified skill: {name}")
-    return category, CATEGORY_TAGS[category]
+def classify(name: str, description: str, category_dir: str) -> tuple[str, list[str]]:
+    del description, name
+    label = CATEGORY_LABELS.get(category_dir)
+    if not label:
+        raise ValueError(f"unclassified category dir: {category_dir}")
+    return label, CATEGORY_TAGS[category_dir]
 
 
 KNOWN_SOURCES = {
@@ -169,50 +144,57 @@ def source(author: str, name: str) -> str:
     return "来源未标注"
 
 
+def read_skill(path: Path, category_dir: str) -> dict[str, object]:
+    skill_file = path / "SKILL.md"
+    if not skill_file.exists():
+        return {"dir": path.name, "name": path.name, "category_dir": category_dir, "missing": True}
+    text = skill_file.read_text(encoding="utf-8-sig", errors="replace")
+    fm = frontmatter(text)
+    name = field(fm, "name") or path.name
+    description = field(fm, "description")
+    author = field(fm, "author")
+    category, tags = classify(path.name, description, category_dir)
+    skill_source = source(author, path.name)
+    flags = []
+    if skill_source == "来源未标注":
+        flags.append("来源未标注")
+    if not field(fm, "version"):
+        flags.append("版本未标注")
+    if len(text) > 50000:
+        flags.append("正文很长")
+    if (path / ".git").exists():
+        flags.append("含嵌套 Git")
+    if any(x in text for x in ("C:\\Users\\Administrator", "E:\\", "dataset_reference_set", "score_v1_reference")):
+        flags.append("含本机或旧项目引用")
+    return {
+        "dir": path.name,
+        "category_dir": category_dir,
+        "name": name,
+        "description": first_sentence(description or "暂无说明"),
+        "author": author,
+        "source": skill_source,
+        "category": category,
+        "tags": tags,
+        "chars": len(text),
+        "flags": flags,
+        "missing": False,
+    }
+
+
 def collect() -> list[dict[str, object]]:
     rows = []
-    for path in sorted(SKILLS.iterdir()):
-        if not path.is_dir() or path.name.startswith("."):
+    for category_dir in sorted(p for p in SKILLS.iterdir() if p.is_dir() and not p.name.startswith(".")):
+        if (category_dir / "SKILL.md").exists():
+            rows.append(read_skill(category_dir, category_dir.name))
             continue
-        skill_file = path / "SKILL.md"
-        if not skill_file.exists():
-            rows.append({"dir": path.name, "name": path.name, "missing": True})
-            continue
-        text = skill_file.read_text(encoding="utf-8-sig", errors="replace")
-        fm = frontmatter(text)
-        name = field(fm, "name") or path.name
-        description = field(fm, "description")
-        author = field(fm, "author")
-        category, tags = classify(path.name, description)
-        skill_source = source(author, path.name)
-        flags = []
-        if skill_source == "来源未标注":
-            flags.append("来源未标注")
-        if not field(fm, "version"):
-            flags.append("版本未标注")
-        if len(text) > 50000:
-            flags.append("正文很长")
-        if (path / ".git").exists():
-            flags.append("含嵌套 Git")
-        if any(x in text for x in ("C:\\Users\\Administrator", "E:\\", "dataset_reference_set", "score_v1_reference")):
-            flags.append("含本机或旧项目引用")
-        rows.append({
-            "dir": path.name,
-            "name": name,
-            "description": first_sentence(description or "暂无说明"),
-            "author": author,
-            "source": skill_source,
-            "category": category,
-            "tags": tags,
-            "chars": len(text),
-            "flags": flags,
-            "missing": False,
-        })
+        for path in sorted(category_dir.iterdir()):
+            if path.is_dir() and not path.name.startswith("."):
+                rows.append(read_skill(path, category_dir.name))
     return rows
 
 
 def link(row: dict[str, object]) -> str:
-    return f"[`{row['name']}`](../skills/{row['dir']}/SKILL.md)"
+    return f"[`{row['name']}`](../skills/{row['category_dir']}/{row['dir']}/SKILL.md)"
 
 
 def write_catalog(rows: list[dict[str, object]]) -> None:
@@ -221,13 +203,7 @@ def write_catalog(rows: list[dict[str, object]]) -> None:
     categories = defaultdict(list)
     for row in usable:
         categories[str(row["category"])].append(row)
-    order = [
-        "学术写作与出版", "文献检索与研究", "研究记录与知识产物",
-        "模型评测、安全与可观测", "训练、微调与强化学习",
-        "模型结构、压缩与可解释性", "推理、量化与部署", "云算力与基础设施",
-        "RAG、Agent与结构化输出", "数据处理与分词", "多模态、机器人与媒体",
-        "生物医学与统计", "专利与职业", "项目专用",
-    ]
+    order = [CATEGORY_LABELS[category_dir] for category_dir in CATEGORY_ORDER]
 
     featured = [
         ("deep-research", "做完整调研、事实核查或系统综述"),
@@ -245,7 +221,7 @@ def write_catalog(rows: list[dict[str, object]]) -> None:
         ("vetai-project-context", "查看 VetAI 仓库结构、测试命令和工作约定"),
     ]
     by_dir = {str(r["dir"]): r for r in usable}
-    readme = """# 技能库入口\n\n这里按“要做什么”找技能。`skills/` 保持原来的平铺路径，现有安装链接不会失效。\n\n## 独立维护的原创技能\n\n[`high-stakes-ai-evaluation`](https://github.com/Charon621/high-stakes-ai-evaluation)：检查医疗、法律、金融等高风险 AI 的效果声明能不能公开，并指出缺失证据。\n\n## 常用精选\n\n| 技能 | 适合做什么 |\n|---|---|\n"""
+    readme = """# 技能库入口\n\n这里按“要做什么”找技能。技能按分类存放在 `skills/<分类>/<技能名>/`，分类目录与 [`catalog/`](catalog/技能总索引.md) 一一对应。\n\n## 独立维护的原创技能\n\n[`high-stakes-ai-evaluation`](https://github.com/Charon621/high-stakes-ai-evaluation)：检查医疗、法律、金融等高风险 AI 的效果声明能不能公开，并指出缺失证据。\n\n## 常用精选\n\n| 技能 | 适合做什么 |\n|---|---|\n"""
     for name, note in featured:
         row = by_dir[name]
         readme += f"| {link(row).replace('../skills/', 'skills/')} | {note} |\n"
@@ -257,7 +233,7 @@ def write_catalog(rows: list[dict[str, object]]) -> None:
         examples = "、".join(f"`{r['name']}`" for r in items[:5])
         readme += f"| {category} | {len(items)} | {examples} |\n"
     readme += """
-完整清单见 [`catalog/技能总索引.md`](catalog/技能总索引.md)，按用户目标重排的入口见 [`catalog/按任务找.md`](catalog/按任务找.md)，来源和维护状态见 [`catalog/来源与待核对.md`](catalog/来源与待核对.md)。\n\n## 安装\n\n单个技能直接安装原始 `SKILL.md`：\n\n```bash\nhermes skills install "https://raw.githubusercontent.com/Charon621/skills/main/skills/<技能名>/SKILL.md" --yes\n```\n\n克隆后，按需把 `skills/<技能名>/` 复制到当前 profile 的 `$HERMES_HOME/skills/`。\n\n## 维护\n\n技能目录保持平铺，分类由 `catalog/` 索引提供。新增或修改技能后运行：\n\n```bash\npython scripts/build_catalog.py\n```\n\n这个仓库同时包含社区技能、个人维护技能和项目专用技能。来源未标注或带项目路径的条目见待核对清单。\n"""
+完整清单见 [`catalog/技能总索引.md`](catalog/技能总索引.md)，按用户目标重排的入口见 [`catalog/按任务找.md`](catalog/按任务找.md)，来源和维护状态见 [`catalog/来源与待核对.md`](catalog/来源与待核对.md)。\n\n## 安装\n\n单个技能直接安装原始 `SKILL.md`（注意 URL 带分类目录）：\n\n```bash\nhermes skills install "https://raw.githubusercontent.com/Charon621/skills/main/skills/<分类>/<技能名>/SKILL.md" --yes\n```\n\n克隆后，按需把 `skills/<分类>/<技能名>/` 复制到当前 profile 的 `$HERMES_HOME/skills/`。\n\n## 维护\n\n技能按分类目录存放（22 个分类，清单与中文名见 `scripts/build_catalog.py` 的 `CATEGORY_ORDER` / `CATEGORY_LABELS`）。新增技能放进对应分类目录后运行：\n\n```bash\npython scripts/build_catalog.py\nnode skill-index.mjs scan . --rules ml-skills-rules.json\n```\n\n`skill-index.mjs` 额外生成机器可读的 `skills.json` 与 `INDEX.md`，并支持关键词检索：`node skill-index.mjs search . <关键词> --rules ml-skills-rules.json`。\n\n这个仓库同时包含社区技能、个人维护技能和项目专用技能。来源未标注或带项目路径的条目见待核对清单。\n"""
     (ROOT / "README.md").write_text(readme, encoding="utf-8")
 
     index = "# 技能总索引\n\n共 **%d** 个技能。按主要用途排列；一个技能只放一个主类，避免同一条目在多个目录重复出现。\n\n" % len(usable)

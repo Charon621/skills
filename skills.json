@@ -1,0 +1,1549 @@
+{
+  "generatedAt": "2026-09-19T07:42:22.028Z",
+  "root": "C:\\Users\\Administrator\\ZCodeProject\\skills",
+  "count": 136,
+  "skills": [
+    {
+      "name": "autogpt-agents",
+      "description": "Autonomous AI agent platform for building and deploying continuous agents. Use when creating visual workflow agents, deploying persistent autonomous agents, or building complex multi-step AI automation systems.",
+      "path": "skills/agent-frameworks/autogpt-agents/SKILL.md",
+      "dirName": "autogpt-agents",
+      "category": "agent-frameworks",
+      "tags": [
+        "agent-frameworks",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "crewai-multi-agent",
+      "description": "Multi-agent orchestration framework for autonomous AI collaboration. Use when building teams of specialized agents working together on complex tasks, when you need role-based agent collaboration with memory, or for production workflows requiring sequential/hierarchical execution. Built without LangChain dependencies for lean, fast execution.",
+      "path": "skills/agent-frameworks/crewai-multi-agent/SKILL.md",
+      "dirName": "crewai-multi-agent",
+      "category": "agent-frameworks",
+      "tags": [
+        "agent-frameworks",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "dspy",
+      "description": "Build complex AI systems with declarative programming, optimize prompts automatically, create modular RAG systems and agents with DSPy - Stanford NLP's framework for systematic LM programming",
+      "path": "skills/agent-frameworks/dspy/SKILL.md",
+      "dirName": "dspy",
+      "category": "agent-frameworks",
+      "tags": [
+        "agent-frameworks",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "evolving-ai-agents",
+      "description": "Provides guidance for automatically evolving and optimizing AI agents across any domain using LLM-driven evolution algorithms. Use when building self-improving agents, optimizing agent prompts and skills against benchmarks, or implementing automated agent evaluation loops.",
+      "path": "skills/agent-frameworks/evolving-ai-agents/SKILL.md",
+      "dirName": "evolving-ai-agents",
+      "category": "agent-frameworks",
+      "tags": [
+        "agent-frameworks",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "guidance",
+      "description": "Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework",
+      "path": "skills/agent-frameworks/guidance/SKILL.md",
+      "dirName": "guidance",
+      "category": "agent-frameworks",
+      "tags": [
+        "agent-frameworks",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "instructor",
+      "description": "Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-tested structured output library",
+      "path": "skills/agent-frameworks/instructor/SKILL.md",
+      "dirName": "instructor",
+      "category": "agent-frameworks",
+      "tags": [
+        "agent-frameworks",
+        "data",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "langchain",
+      "description": "Framework for building LLM-powered applications with agents, chains, and RAG. Supports multiple providers (OpenAI, Anthropic, Google), 500+ integrations, ReAct agents, tool calling, memory management, and vector store retrieval. Use for building chatbots, question-answering systems, autonomous agents, or RAG applications. Best for rapid prototyping and production deployments.",
+      "path": "skills/agent-frameworks/langchain/SKILL.md",
+      "dirName": "langchain",
+      "category": "agent-frameworks",
+      "tags": [
+        "agent-frameworks",
+        "ai"
+      ]
+    },
+    {
+      "name": "outlines",
+      "description": "Guarantee valid JSON/XML/code structure during generation, use Pydantic models for type-safe outputs, support local models (Transformers, vLLM), and maximize inference speed with Outlines - dottxt.ai's structured generation library",
+      "path": "skills/agent-frameworks/outlines/SKILL.md",
+      "dirName": "outlines",
+      "category": "agent-frameworks",
+      "tags": [
+        "agent-frameworks",
+        "ai"
+      ]
+    },
+    {
+      "name": "nemo-curator",
+      "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16× faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs with RAPIDS. Use for preparing high-quality training datasets, cleaning web data, or deduplicating large corpora.",
+      "path": "skills/data-engineering/nemo-curator/SKILL.md",
+      "dirName": "nemo-curator",
+      "category": "data-engineering",
+      "tags": [
+        "data-engineering",
+        "data",
+        "ai"
+      ]
+    },
+    {
+      "name": "ray-data",
+      "description": "Scalable data processing for ML workloads. Streaming execution across CPU/GPU, supports Parquet/CSV/JSON/images. Integrates with Ray Train, PyTorch, TensorFlow. Scales from single machine to 100s of nodes. Use for batch inference, data preprocessing, multi-modal data loading, or distributed ETL pipelines.",
+      "path": "skills/data-engineering/ray-data/SKILL.md",
+      "dirName": "ray-data",
+      "category": "data-engineering",
+      "tags": [
+        "data-engineering",
+        "data",
+        "automation"
+      ]
+    },
+    {
+      "name": "biology",
+      "description": "Explore and explain biology with depth adapted to any learner or expert.",
+      "path": "skills/domain-science/biology/SKILL.md",
+      "dirName": "biology",
+      "category": "domain-science",
+      "tags": [
+        "domain-science",
+        "other"
+      ]
+    },
+    {
+      "name": "statistics",
+      "description": "Build statistical intuition from basic probability to advanced inference.",
+      "path": "skills/domain-science/statistics/SKILL.md",
+      "dirName": "statistics",
+      "category": "domain-science",
+      "tags": [
+        "domain-science",
+        "other"
+      ]
+    },
+    {
+      "name": "veterinary",
+      "description": "Support veterinary understanding from pet care to clinical practice and research.",
+      "path": "skills/domain-science/veterinary/SKILL.md",
+      "dirName": "veterinary",
+      "category": "domain-science",
+      "tags": [
+        "domain-science",
+        "other"
+      ]
+    },
+    {
+      "name": "evaluating-code-models",
+      "description": "Evaluates code generation models across HumanEval, MBPP, MultiPL-E, and 15+ benchmarks with pass@k metrics. Use when benchmarking code models, comparing coding abilities, testing multi-language support, or measuring code generation quality. Industry standard from BigCode Project used by HuggingFace leaderboards.",
+      "path": "skills/evaluation-benchmarks/evaluating-code-models/SKILL.md",
+      "dirName": "evaluating-code-models",
+      "category": "evaluation-benchmarks",
+      "tags": [
+        "evaluation-benchmarks",
+        "other"
+      ]
+    },
+    {
+      "name": "evaluating-llms-harness",
+      "description": "Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs.",
+      "path": "skills/evaluation-benchmarks/evaluating-llms-harness/SKILL.md",
+      "dirName": "evaluating-llms-harness",
+      "category": "evaluation-benchmarks",
+      "tags": [
+        "evaluation-benchmarks",
+        "other"
+      ]
+    },
+    {
+      "name": "nemo-evaluator-sdk",
+      "description": "Evaluates LLMs across 100+ benchmarks from 18+ harnesses (MMLU, HumanEval, GSM8K, safety, VLM) with multi-backend execution. Use when needing scalable evaluation on local Docker, Slurm HPC, or cloud platforms. NVIDIA's enterprise-grade platform with container-first architecture for reproducible benchmarking.",
+      "path": "skills/evaluation-benchmarks/nemo-evaluator-sdk/SKILL.md",
+      "dirName": "nemo-evaluator-sdk",
+      "category": "evaluation-benchmarks",
+      "tags": [
+        "evaluation-benchmarks",
+        "other"
+      ]
+    },
+    {
+      "name": "axolotl",
+      "description": "Expert guidance for fine-tuning LLMs with Axolotl - YAML configs, 100+ models, LoRA/QLoRA, DPO/KTO/ORPO/GRPO, multimodal support",
+      "path": "skills/fine-tuning/axolotl/SKILL.md",
+      "dirName": "axolotl",
+      "category": "fine-tuning",
+      "tags": [
+        "fine-tuning",
+        "other"
+      ]
+    },
+    {
+      "name": "fine-tuning-with-trl",
+      "description": "Fine-tune LLMs using reinforcement learning with TRL - SFT for instruction tuning, DPO for preference alignment, PPO/GRPO for reward optimization, and reward model training. Use when need RLHF, align model with preferences, or train from human feedback. Works with HuggingFace Transformers.",
+      "path": "skills/fine-tuning/fine-tuning-with-trl/SKILL.md",
+      "dirName": "fine-tuning-with-trl",
+      "category": "fine-tuning",
+      "tags": [
+        "fine-tuning",
+        "other"
+      ]
+    },
+    {
+      "name": "llama-factory",
+      "description": "Expert guidance for fine-tuning LLMs with LLaMA-Factory - WebUI no-code, 100+ models, 2/3/4/5/6/8-bit QLoRA, multimodal support",
+      "path": "skills/fine-tuning/llama-factory/SKILL.md",
+      "dirName": "llama-factory",
+      "category": "fine-tuning",
+      "tags": [
+        "fine-tuning",
+        "other"
+      ]
+    },
+    {
+      "name": "peft-fine-tuning",
+      "description": "Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter serving. HuggingFace's official library integrated with transformers ecosystem.",
+      "path": "skills/fine-tuning/peft-fine-tuning/SKILL.md",
+      "dirName": "peft-fine-tuning",
+      "category": "fine-tuning",
+      "tags": [
+        "fine-tuning",
+        "other"
+      ]
+    },
+    {
+      "name": "simpo-training",
+      "description": "Simple Preference Optimization for LLM alignment. Reference-free alternative to DPO with better performance (+6.4 points on AlpacaEval 2.0). No reference model needed, more efficient than DPO. Use for preference alignment when want simpler, faster training than DPO/PPO.",
+      "path": "skills/fine-tuning/simpo-training/SKILL.md",
+      "dirName": "simpo-training",
+      "category": "fine-tuning",
+      "tags": [
+        "fine-tuning",
+        "ai"
+      ]
+    },
+    {
+      "name": "unsloth",
+      "description": "Expert guidance for fast fine-tuning with Unsloth - 2-5x faster training, 50-80% less memory, LoRA/QLoRA optimization",
+      "path": "skills/fine-tuning/unsloth/SKILL.md",
+      "dirName": "unsloth",
+      "category": "fine-tuning",
+      "tags": [
+        "fine-tuning",
+        "other"
+      ]
+    },
+    {
+      "name": "lambda-labs-gpu-cloud",
+      "description": "Reserved and on-demand GPU cloud instances for ML training and inference. Use when you need dedicated GPU instances with simple SSH access, persistent filesystems, or high-performance multi-node clusters for large-scale training.",
+      "path": "skills/gpu-cloud/lambda-labs-gpu-cloud/SKILL.md",
+      "dirName": "lambda-labs-gpu-cloud",
+      "category": "gpu-cloud",
+      "tags": [
+        "gpu-cloud",
+        "other"
+      ]
+    },
+    {
+      "name": "modal-serverless-gpu",
+      "description": "Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic scaling.",
+      "path": "skills/gpu-cloud/modal-serverless-gpu/SKILL.md",
+      "dirName": "modal-serverless-gpu",
+      "category": "gpu-cloud",
+      "tags": [
+        "gpu-cloud",
+        "automation"
+      ]
+    },
+    {
+      "name": "skypilot-multi-cloud-orchestration",
+      "description": "Multi-cloud orchestration for ML workloads with automatic cost optimization. Use when you need to run training or batch jobs across multiple clouds, leverage spot instances with auto-recovery, or optimize GPU costs across providers.",
+      "path": "skills/gpu-cloud/skypilot-multi-cloud-orchestration/SKILL.md",
+      "dirName": "skypilot-multi-cloud-orchestration",
+      "category": "gpu-cloud",
+      "tags": [
+        "gpu-cloud",
+        "automation"
+      ]
+    },
+    {
+      "name": "llama-cpp",
+      "description": "Runs LLM inference on CPU, Apple Silicon, and consumer GPUs without NVIDIA hardware. Use for edge deployment, M1/M2/M3 Macs, AMD/Intel GPUs, or when CUDA is unavailable. Supports GGUF quantization (1.5-8 bit) for reduced memory and 4-10× speedup vs PyTorch on CPU.",
+      "path": "skills/inference-serving/llama-cpp/SKILL.md",
+      "dirName": "llama-cpp",
+      "category": "inference-serving",
+      "tags": [
+        "inference-serving",
+        "ai"
+      ]
+    },
+    {
+      "name": "optimizing-attention-flash",
+      "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory issues with attention, or need faster inference. Supports PyTorch native SDPA, flash-attn library, H100 FP8, and sliding window attention.",
+      "path": "skills/inference-serving/optimizing-attention-flash/SKILL.md",
+      "dirName": "optimizing-attention-flash",
+      "category": "inference-serving",
+      "tags": [
+        "inference-serving",
+        "other"
+      ]
+    },
+    {
+      "name": "serving-llms-vllm",
+      "description": "Serves LLMs with high throughput using vLLM's PagedAttention and continuous batching. Use when deploying production LLM APIs, optimizing inference latency/throughput, or serving models with limited GPU memory. Supports OpenAI-compatible endpoints, quantization (GPTQ/AWQ/FP8), and tensor parallelism.",
+      "path": "skills/inference-serving/serving-llms-vllm/SKILL.md",
+      "dirName": "serving-llms-vllm",
+      "category": "inference-serving",
+      "tags": [
+        "inference-serving",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "sglang",
+      "description": "Fast structured generation and serving for LLMs with RadixAttention prefix caching. Use for JSON/regex outputs, constrained decoding, agentic workflows with tool calls, or when you need 5× faster inference than vLLM with prefix sharing. Powers 300,000+ GPUs at xAI, AMD, NVIDIA, and LinkedIn.",
+      "path": "skills/inference-serving/sglang/SKILL.md",
+      "dirName": "sglang",
+      "category": "inference-serving",
+      "tags": [
+        "inference-serving",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "speculative-decoding",
+      "description": "Accelerate LLM inference using speculative decoding, Medusa multiple heads, and lookahead decoding techniques. Use when optimizing inference speed (1.5-3.6× speedup), reducing latency for real-time applications, or deploying models with limited compute. Covers draft models, tree-based attention, Jacobi iteration, parallel token generation, and production deployment strategies.",
+      "path": "skills/inference-serving/speculative-decoding/SKILL.md",
+      "dirName": "speculative-decoding",
+      "category": "inference-serving",
+      "tags": [
+        "inference-serving",
+        "ai"
+      ]
+    },
+    {
+      "name": "tensorrt-llm",
+      "description": "Optimizes LLM inference with NVIDIA TensorRT for maximum throughput and lowest latency. Use for production deployment on NVIDIA GPUs (A100/H100), when you need 10-100x faster inference than PyTorch, or for serving models with quantization (FP8/INT4), in-flight batching, and multi-GPU scaling.",
+      "path": "skills/inference-serving/tensorrt-llm/SKILL.md",
+      "dirName": "tensorrt-llm",
+      "category": "inference-serving",
+      "tags": [
+        "inference-serving",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "nnsight-remote-interpretability",
+      "description": "Provides guidance for interpreting and manipulating neural network internals using nnsight with optional NDIF remote execution. Use when needing to run interpretability experiments on massive models (70B+) without local GPU resources, or when working with any PyTorch architecture.",
+      "path": "skills/interpretability/nnsight-remote-interpretability/SKILL.md",
+      "dirName": "nnsight-remote-interpretability",
+      "category": "interpretability",
+      "tags": [
+        "interpretability",
+        "other"
+      ]
+    },
+    {
+      "name": "pyvene-interventions",
+      "description": "Provides guidance for performing causal interventions on PyTorch models using pyvene's declarative intervention framework. Use when conducting causal tracing, activation patching, interchange intervention training, or testing causal hypotheses about model behavior.",
+      "path": "skills/interpretability/pyvene-interventions/SKILL.md",
+      "dirName": "pyvene-interventions",
+      "category": "interpretability",
+      "tags": [
+        "interpretability",
+        "other"
+      ]
+    },
+    {
+      "name": "sparse-autoencoder-training",
+      "description": "Provides guidance for training and analyzing Sparse Autoencoders (SAEs) using SAELens to decompose neural network activations into interpretable features. Use when discovering interpretable features, analyzing superposition, or studying monosemantic representations in language models.",
+      "path": "skills/interpretability/sparse-autoencoder-training/SKILL.md",
+      "dirName": "sparse-autoencoder-training",
+      "category": "interpretability",
+      "tags": [
+        "interpretability",
+        "other"
+      ]
+    },
+    {
+      "name": "transformer-lens-interpretability",
+      "description": "Provides guidance for mechanistic interpretability research using TransformerLens to inspect and manipulate transformer internals via HookPoints and activation caching. Use when reverse-engineering model algorithms, studying attention patterns, or performing activation patching experiments.",
+      "path": "skills/interpretability/transformer-lens-interpretability/SKILL.md",
+      "dirName": "transformer-lens-interpretability",
+      "category": "interpretability",
+      "tags": [
+        "interpretability",
+        "other"
+      ]
+    },
+    {
+      "name": "huggingface-tokenizers",
+      "description": "Fast tokenizers optimized for research and production. Rust-based implementation tokenizes 1GB in <20 seconds. Supports BPE, WordPiece, and Unigram algorithms. Train custom vocabularies, track alignments, handle padding/truncation. Integrates seamlessly with transformers. Use when you need high-performance tokenization or custom tokenizer training.",
+      "path": "skills/model-architecture/huggingface-tokenizers/SKILL.md",
+      "dirName": "huggingface-tokenizers",
+      "category": "model-architecture",
+      "tags": [
+        "model-architecture",
+        "document"
+      ]
+    },
+    {
+      "name": "long-context",
+      "description": "Extend context windows of transformer models using RoPE, YaRN, ALiBi, and position interpolation techniques. Use when processing long documents (32k-128k+ tokens), extending pre-trained models beyond original context limits, or implementing efficient positional encodings. Covers rotary embeddings, attention biases, interpolation methods, and extrapolation strategies for LLMs.",
+      "path": "skills/model-architecture/long-context/SKILL.md",
+      "dirName": "long-context",
+      "category": "model-architecture",
+      "tags": [
+        "model-architecture",
+        "other"
+      ]
+    },
+    {
+      "name": "mamba-architecture",
+      "description": "State-space model with O(n) complexity vs Transformers' O(n²). 5× faster inference, million-token sequences, no KV cache. Selective SSM with hardware-aware design. Mamba-1 (d_state=16) and Mamba-2 (d_state=128, multi-head). Models 130M-2.8B on HuggingFace.",
+      "path": "skills/model-architecture/mamba-architecture/SKILL.md",
+      "dirName": "mamba-architecture",
+      "category": "model-architecture",
+      "tags": [
+        "model-architecture",
+        "other"
+      ]
+    },
+    {
+      "name": "rwkv-architecture",
+      "description": "RNN+Transformer hybrid with O(n) inference. Linear time, infinite context, no KV cache. Train like GPT (parallel), infer like RNN (sequential). Linux Foundation AI project. Production at Windows, Office, NeMo. RWKV-7 (March 2025). Models up to 14B parameters.",
+      "path": "skills/model-architecture/rwkv-architecture/SKILL.md",
+      "dirName": "rwkv-architecture",
+      "category": "model-architecture",
+      "tags": [
+        "model-architecture",
+        "other"
+      ]
+    },
+    {
+      "name": "sentencepiece",
+      "description": "Language-independent tokenizer treating text as raw Unicode. Supports BPE and Unigram algorithms. Fast (50k sentences/sec), lightweight (6MB memory), deterministic vocabulary. Used by T5, ALBERT, XLNet, mBART. Train on raw text without pre-tokenization. Use when you need multilingual support, CJK languages, or reproducible tokenization.",
+      "path": "skills/model-architecture/sentencepiece/SKILL.md",
+      "dirName": "sentencepiece",
+      "category": "model-architecture",
+      "tags": [
+        "model-architecture",
+        "other"
+      ]
+    },
+    {
+      "name": "audiocraft-audio-generation",
+      "description": "PyTorch library for audio generation including text-to-music (MusicGen) and text-to-sound (AudioGen). Use when you need to generate music from text descriptions, create sound effects, or perform melody-conditioned music generation.",
+      "path": "skills/multimodal-media/audiocraft-audio-generation/SKILL.md",
+      "dirName": "audiocraft-audio-generation",
+      "category": "multimodal-media",
+      "tags": [
+        "multimodal-media",
+        "other"
+      ]
+    },
+    {
+      "name": "blip-2-vision-language",
+      "description": "Vision-language pre-training framework bridging frozen image encoders and LLMs. Use when you need image captioning, visual question answering, image-text retrieval, or multimodal chat with state-of-the-art zero-shot performance.",
+      "path": "skills/multimodal-media/blip-2-vision-language/SKILL.md",
+      "dirName": "blip-2-vision-language",
+      "category": "multimodal-media",
+      "tags": [
+        "multimodal-media",
+        "other"
+      ]
+    },
+    {
+      "name": "clip",
+      "description": "OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, content moderation, or vision-language tasks without fine-tuning. Best for general-purpose image understanding.",
+      "path": "skills/multimodal-media/clip/SKILL.md",
+      "dirName": "clip",
+      "category": "multimodal-media",
+      "tags": [
+        "multimodal-media",
+        "other"
+      ]
+    },
+    {
+      "name": "llava",
+      "description": "Large Language and Vision Assistant. Enables visual instruction tuning and image-based conversations. Combines CLIP vision encoder with Vicuna/LLaMA language models. Supports multi-turn image chat, visual question answering, and instruction following. Use for vision-language chatbots or image understanding tasks. Best for conversational image analysis.",
+      "path": "skills/multimodal-media/llava/SKILL.md",
+      "dirName": "llava",
+      "category": "multimodal-media",
+      "tags": [
+        "multimodal-media",
+        "other"
+      ]
+    },
+    {
+      "name": "segment-anything-model",
+      "description": "Foundation model for image segmentation with zero-shot transfer. Use when you need to segment any object in images using points, boxes, or masks as prompts, or automatically generate all object masks in an image.",
+      "path": "skills/multimodal-media/segment-anything-model/SKILL.md",
+      "dirName": "segment-anything-model",
+      "category": "multimodal-media",
+      "tags": [
+        "multimodal-media",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "stable-diffusion-image-generation",
+      "description": "State-of-the-art text-to-image generation with Stable Diffusion models via HuggingFace Diffusers. Use when generating images from text prompts, performing image-to-image translation, inpainting, or building custom diffusion pipelines.",
+      "path": "skills/multimodal-media/stable-diffusion-image-generation/SKILL.md",
+      "dirName": "stable-diffusion-image-generation",
+      "category": "multimodal-media",
+      "tags": [
+        "multimodal-media",
+        "ai"
+      ]
+    },
+    {
+      "name": "whisper",
+      "description": "OpenAI's general-purpose speech recognition model. Supports 99 languages, transcription, translation to English, and language identification. Six model sizes from tiny (39M params) to large (1550M params). Use for speech-to-text, podcast transcription, or multilingual audio processing. Best for robust, multilingual ASR.",
+      "path": "skills/multimodal-media/whisper/SKILL.md",
+      "dirName": "whisper",
+      "category": "multimodal-media",
+      "tags": [
+        "multimodal-media",
+        "other"
+      ]
+    },
+    {
+      "name": "nature-academic-search",
+      "description": ">-",
+      "path": "skills/nature-suite/nature-academic-search/SKILL.md",
+      "dirName": "nature-academic-search",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "other"
+      ]
+    },
+    {
+      "name": "nature-citation",
+      "description": ">-",
+      "path": "skills/nature-suite/nature-citation/SKILL.md",
+      "dirName": "nature-citation",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "other"
+      ]
+    },
+    {
+      "name": "nature-data",
+      "description": ">-",
+      "path": "skills/nature-suite/nature-data/SKILL.md",
+      "dirName": "nature-data",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "data"
+      ]
+    },
+    {
+      "name": "nature-downloader",
+      "description": "Use when a user needs lawful academic full text, CNKI institutional access, English OA retrieval, publisher API access, institutional browser fallback, or supporting information downloads.",
+      "path": "skills/nature-suite/nature-downloader/SKILL.md",
+      "dirName": "nature-downloader",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "browser"
+      ]
+    },
+    {
+      "name": "nature-experiment-log",
+      "description": "标准化实验日志记录——直接上传或读取本地图片、语音和文字，产出带 YAML frontmatter 的 Markdown；可选集成飞书 CLI 与 Obsidian。",
+      "path": "skills/nature-suite/nature-experiment-log/SKILL.md",
+      "dirName": "nature-experiment-log",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "other"
+      ]
+    },
+    {
+      "name": "nature-figure",
+      "description": ">-",
+      "path": "skills/nature-suite/nature-figure/SKILL.md",
+      "dirName": "nature-figure",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "other"
+      ]
+    },
+    {
+      "name": "nature-literature-pipeline",
+      "description": "Complete automated literature discovery pipeline: multi-source search → six-dimension scoring → fine reading → formatted delivery → archival.\nCombines a configurable engine with daily cron-driven application layer. Works with Feishu, Telegram, or any messaging platform.",
+      "path": "skills/nature-suite/nature-literature-pipeline/SKILL.md",
+      "dirName": "nature-literature-pipeline",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "automation"
+      ]
+    },
+    {
+      "name": "nature-paper-card",
+      "description": "Build a source-grounded deep-reading Paper Card for one scientific paper, preprint, PDF, DOI, arXiv page, publisher article, or pasted paper text. Use when the user asks for a Paper Card, deep-reading literature card, single-paper deep analysis, module-by-module analysis, experiment-to-claim evidence chain, conclusion-boundary audit, critical analysis, knowledge connections, or candidate research ideas. Produce the fixed Sections 01-16 covering bibliographic position, research question, background route, pain point, core insight, method and module logic, essential formulas, experiment-to-claim evidence, conclusion boundaries, author-stated limitations, critical analysis, learned knowledge, knowledge connections, and testable research ideas. Do not use for full-paper bilingual translation, formal peer-review reports, batch literature monitoring, academic-English collection, comprehension quizzes, or public-article writing.",
+      "path": "skills/nature-suite/nature-paper-card/SKILL.md",
+      "dirName": "nature-paper-card",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "document",
+        "writing",
+        "automation"
+      ]
+    },
+    {
+      "name": "nature-paper-to-patent",
+      "description": "Convert scientific papers, theses, technical reports, source code, figures, inventor notes, or research manuscripts into evidence-grounded Chinese invention patent drafts and attorney-facing technical disclosure materials. Use when an AI agent must mine patent points, draft or revise a Chinese technical disclosure (技术交底书), run prior-art comparison, convert Office project materials, map every claimed feature to source evidence, preserve core formulas as editable Office Math, generate claim-aligned flowcharts and methodology figures, compare a paper with an existing patent, audit support and consistency, or deliver Chinese DOCX patent/disclosure files.",
+      "path": "skills/nature-suite/nature-paper-to-patent/SKILL.md",
+      "dirName": "nature-paper-to-patent",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "document",
+        "data",
+        "ai"
+      ]
+    },
+    {
+      "name": "nature-paper2ppt",
+      "description": "Build a complete Nature-style Chinese PPTX presentation from a scientific paper, preprint, PDF, article text, figure legends, or reading notes. Use for journal club, group meeting, thesis seminar, paper sharing, conference or defense decks, and Chinese requests such as 论文做PPT、论文汇报、组会PPT、文献汇报、学术汇报、做幻灯片、读书报告PPT. It classifies paper type, builds an evidence-led story, selects key figures, writes Chinese slide content and speaker notes, creates the actual .pptx, and runs corrective QA for complete figure crops, stable alignment, text overflow, and de-templated Chinese academic expression. Also trigger when improving weak paper-to-PPT output with cropped figures, loose alignment, obvious AI-style wording, or heavy manual rework.",
+      "path": "skills/nature-suite/nature-paper2ppt/SKILL.md",
+      "dirName": "nature-paper2ppt",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "document",
+        "writing"
+      ]
+    },
+    {
+      "name": "nature-polishing",
+      "description": "Polish, restructure, or translate academic prose into Nature-leaning English using writing-strategy principles, curated Nature/Nature Communications article patterns, and phrase-level support from Academic Phrasebank. Use whenever the user asks to polish a manuscript paragraph, abstract, introduction, results, discussion, conclusion, title, methods section, or Chinese academic draft for publication-quality English. Also covers LaTeX layout/typesetting (排版) fixes — loose or sparse pages, stranded section headings, figures that don't fill the page or split across pages, \"Float too large\", multi-panel figure arrangement, and Supplementary Information that looks empty — via references/latex-layout.md. Also trigger on general academic/scientific writing requests even without the word \"Nature\", including academic writing, scientific writing, SCI/paper writing, English manuscript polishing, language editing, proofreading, and Chinese phrasings such as 学术写作、科研写作、论文润色、写paper、SCI写作、英文论文润色、语言润色、润色、改写、学术英语、英文写作.",
+      "path": "skills/nature-suite/nature-polishing/SKILL.md",
+      "dirName": "nature-polishing",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "document",
+        "writing"
+      ]
+    },
+    {
+      "name": "nature-reader",
+      "description": "Build full-paper Chinese-English side-by-side, figure/table/equation-aware, source-grounded Markdown readers for journal or conference papers from PDF, DOI, arXiv, publisher HTML, or pasted text. Use whenever the user asks to translate or read a paper, make 中英文对照/原文对照/全文翻译解读, render equations instead of exposing raw LaTeX, extract figures or tables into the right positions, preserve figure/table placement near relevant prose, or keep exact source anchors for every block. This skill must not degrade into a summary-only output unless the user explicitly asks for a summary. Also trigger on general paper-reading and translation requests even without the word \"Nature\", such as reading/translating an academic paper, literature reading, understanding a paper, and Chinese phrasings like 读论文、精读论文、论文翻译、文献翻译、文献阅读、学术阅读、帮我读这篇文章、翻译这篇paper.",
+      "path": "skills/nature-suite/nature-reader/SKILL.md",
+      "dirName": "nature-reader",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "document",
+        "writing"
+      ]
+    },
+    {
+      "name": "nature-ref-verifier",
+      "description": ">-",
+      "path": "skills/nature-suite/nature-ref-verifier/SKILL.md",
+      "dirName": "nature-ref-verifier",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "other"
+      ]
+    },
+    {
+      "name": "nature-response",
+      "description": ">-",
+      "path": "skills/nature-suite/nature-response/SKILL.md",
+      "dirName": "nature-response",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "other"
+      ]
+    },
+    {
+      "name": "nature-reviewer",
+      "description": ">-",
+      "path": "skills/nature-suite/nature-reviewer/SKILL.md",
+      "dirName": "nature-reviewer",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "other"
+      ]
+    },
+    {
+      "name": "nature-shared",
+      "description": "Internal shared-reference support package for installed nature-writing, nature-polishing, nature-reader, and nature-paper2ppt skills. Do not invoke it as a standalone user workflow. Load only the specific core or journal-format file requested by another Nature skill.",
+      "path": "skills/nature-suite/nature-shared/SKILL.md",
+      "dirName": "nature-shared",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "writing",
+        "automation"
+      ]
+    },
+    {
+      "name": "nature-statistics",
+      "description": ">-",
+      "path": "skills/nature-suite/nature-statistics/SKILL.md",
+      "dirName": "nature-statistics",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "other"
+      ]
+    },
+    {
+      "name": "nature-writing",
+      "description": "Draft, restructure, or plan Nature-style manuscript sections and initial-submission materials from author-provided claims, results, figures, notes, or Chinese drafts. Use when the user wants to write or rebuild an abstract, introduction, related-work, method, experiments, discussion, conclusion, title, full manuscript argument, pre-submission cover letter, title page, highlights, author-contribution statement, availability/declaration text, reviewer suggestions, or a complete initial submission package rather than only polish finished prose. Also trigger on general academic-writing and first-submission requests such as writing a paper from scratch, drafting a manuscript/section, structuring a paper, submission package, 投稿材料、首次投稿、投稿前 cover letter、投稿信、标题页、亮点、作者贡献、数据可用性声明、推荐审稿人.",
+      "path": "skills/nature-suite/nature-writing/SKILL.md",
+      "dirName": "nature-writing",
+      "category": "nature-suite",
+      "tags": [
+        "nature-suite",
+        "writing",
+        "data"
+      ]
+    },
+    {
+      "name": "experiment-tracking-swanlab",
+      "description": "Provides guidance for experiment tracking with SwanLab. Use when you need open-source run tracking, local or self-hosted dashboards, and lightweight media logging for ML workflows.",
+      "path": "skills/observability-tracking/experiment-tracking-swanlab/SKILL.md",
+      "dirName": "experiment-tracking-swanlab",
+      "category": "observability-tracking",
+      "tags": [
+        "observability-tracking",
+        "automation"
+      ]
+    },
+    {
+      "name": "langsmith-observability",
+      "description": "LLM observability platform for tracing, evaluation, and monitoring. Use when debugging LLM applications, evaluating model outputs against datasets, monitoring production systems, or building systematic testing pipelines for AI applications.",
+      "path": "skills/observability-tracking/langsmith-observability/SKILL.md",
+      "dirName": "langsmith-observability",
+      "category": "observability-tracking",
+      "tags": [
+        "observability-tracking",
+        "dev-workflow",
+        "ai"
+      ]
+    },
+    {
+      "name": "mlflow",
+      "description": "Track ML experiments, manage model registry with versioning, deploy models to production, and reproduce experiments with MLflow - framework-agnostic ML lifecycle platform",
+      "path": "skills/observability-tracking/mlflow/SKILL.md",
+      "dirName": "mlflow",
+      "category": "observability-tracking",
+      "tags": [
+        "observability-tracking",
+        "other"
+      ]
+    },
+    {
+      "name": "phoenix-observability",
+      "description": "Open-source AI observability platform for LLM tracing, evaluation, and monitoring. Use when debugging LLM applications with detailed traces, running evaluations on datasets, or monitoring production AI systems with real-time insights.",
+      "path": "skills/observability-tracking/phoenix-observability/SKILL.md",
+      "dirName": "phoenix-observability",
+      "category": "observability-tracking",
+      "tags": [
+        "observability-tracking",
+        "dev-workflow",
+        "ai"
+      ]
+    },
+    {
+      "name": "tensorboard",
+      "description": "Visualize training metrics, debug models with histograms, compare experiments, visualize model graphs, and profile performance with TensorBoard - Google's ML visualization toolkit",
+      "path": "skills/observability-tracking/tensorboard/SKILL.md",
+      "dirName": "tensorboard",
+      "category": "observability-tracking",
+      "tags": [
+        "observability-tracking",
+        "dev-workflow"
+      ]
+    },
+    {
+      "name": "weights-and-biases",
+      "description": "Track ML experiments with automatic logging, visualize training in real-time, optimize hyperparameters with sweeps, and manage model registry with W&B - collaborative MLOps platform",
+      "path": "skills/observability-tracking/weights-and-biases/SKILL.md",
+      "dirName": "weights-and-biases",
+      "category": "observability-tracking",
+      "tags": [
+        "observability-tracking",
+        "automation"
+      ]
+    },
+    {
+      "name": "academic-paper-reviewer",
+      "description": "Multi-perspective academic paper review with dynamic reviewer personas. Simulates 5 independent reviewers (Journal-Fit Reviewer + 3 peer reviewers + Devil's Advocate) with field-specific expertise. Supports full review, re-review (verification), quick assessment, methodology focus, Socratic guided, and calibration modes. Triggers on: review paper, peer review, manuscript review, referee report, review my paper, critique paper, simulate review, editorial review, calibrate reviewer, reviewer calibration, measure reviewer accuracy, 審查論文, 論文審查, 模擬審查, 同儕審查, 幫我審這篇, 以審查人角度評估, 審查者校準, 논문 심사, 동료 심사, 모의 심사, 심사자 관점에서 평가, 심사자 보정.",
+      "path": "skills/paper-writing/academic-paper-reviewer/SKILL.md",
+      "dirName": "academic-paper-reviewer",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing"
+      ]
+    },
+    {
+      "name": "academic-paper-workflow",
+      "description": "Orchestrate end-to-end academic paper research and writing.",
+      "path": "skills/paper-writing/academic-paper-workflow/SKILL.md",
+      "dirName": "academic-paper-workflow",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing",
+        "automation"
+      ]
+    },
+    {
+      "name": "academic-paper",
+      "description": "12-agent academic paper writing pipeline. 11 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure/rebuttal-audit). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, audit my rebuttal, check my response draft, AI disclosure, 寫論文, 學術論文, 引導我寫論文, 審查意見, 評估回覆, 논문 작성, 초록 작성, 논문 수정, 논문 계획을 도와줘, 심사 의견 반영, 답변서 점검, AI 사용 고지.",
+      "path": "skills/paper-writing/academic-paper/SKILL.md",
+      "dirName": "academic-paper",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "document",
+        "writing",
+        "ai"
+      ]
+    },
+    {
+      "name": "academic-pipeline",
+      "description": "Orchestrator for the full academic research pipeline: research -> write -> integrity check -> review -> revise -> re-review -> re-revise -> final integrity check -> finalize. Coordinates deep-research, academic-paper, and academic-paper-reviewer into a seamless 10-stage workflow with mandatory integrity verification, two-stage peer review, and reproducible quality gates. Triggers on: academic pipeline, research to paper, full paper workflow, paper pipeline, end-to-end paper, research-to-publication, complete paper workflow, 연구부터 논문까지, 연구 주제 설정부터 논문 완성까지, 논문 전체 워크플로.",
+      "path": "skills/paper-writing/academic-pipeline/SKILL.md",
+      "dirName": "academic-pipeline",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing",
+        "automation"
+      ]
+    },
+    {
+      "name": "academic-plotting",
+      "description": "Generates publication-quality figures for ML papers from research context. Given a paper section or description, extracts system components and relationships to generate architecture diagrams via Gemini. Given experiment results or data, auto-selects chart type and generates data-driven figures via matplotlib/seaborn. Use when creating any figure for a conference paper.",
+      "path": "skills/paper-writing/academic-plotting/SKILL.md",
+      "dirName": "academic-plotting",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing",
+        "data"
+      ]
+    },
+    {
+      "name": "academic-writing-assistant",
+      "description": "Academic writing assistance skill for paragraph writing, language polishing, grammar checking, academic style optimization, and citation format checking.",
+      "path": "skills/paper-writing/academic-writing-assistant/SKILL.md",
+      "dirName": "academic-writing-assistant",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing"
+      ]
+    },
+    {
+      "name": "citation-management",
+      "description": "Manage BibTeX citations for LaTeX papers. Harvest missing citations from a draft using Semantic Scholar, validate cite keys against .bib files, deduplicate entries, and format bibliography. Use when working with references, BibTeX, or citations.",
+      "path": "skills/paper-writing/citation-management/SKILL.md",
+      "dirName": "citation-management",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing"
+      ]
+    },
+    {
+      "name": "cn-academic-paper-standards",
+      "description": "Use when 撰写或润色中文学术论文、毕业论文、期刊投稿。执行国标规范与学术语态润色。",
+      "path": "skills/paper-writing/cn-academic-paper-standards/SKILL.md",
+      "dirName": "cn-academic-paper-standards",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing"
+      ]
+    },
+    {
+      "name": "humanize-academic-writing",
+      "description": "Transform AI-generated academic text into natural, human-like scholarly writing for social sciences. Detects AI patterns (repetitive structures, abstract language, mechanical flow) and rewrites with authentic academic voice. Use when revising AI-drafted papers, improving writing naturalness, reducing AI detection markers, or when user mentions humanizing text, academic writing quality, or social science writing for non-native English speakers.",
+      "path": "skills/paper-writing/humanize-academic-writing/SKILL.md",
+      "dirName": "humanize-academic-writing",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing"
+      ]
+    },
+    {
+      "name": "ml-paper-writing",
+      "description": "Write publication-ready ML/AI papers for NeurIPS, ICML, ICLR, ACL, AAAI, COLM. Use when drafting papers from research repos, structuring arguments, verifying citations, or preparing camera-ready submissions. For systems venues (OSDI, NSDI, ASPLOS, SOSP), use systems-paper-writing instead.",
+      "path": "skills/paper-writing/ml-paper-writing/SKILL.md",
+      "dirName": "ml-paper-writing",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing"
+      ]
+    },
+    {
+      "name": "presenting-conference-talks",
+      "description": "Generates conference presentation slides (Beamer LaTeX PDF and editable PPTX) from a compiled paper with speaker notes and talk script. Use when preparing oral talks, spotlight presentations, or invited talks for ML and systems conferences.",
+      "path": "skills/paper-writing/presenting-conference-talks/SKILL.md",
+      "dirName": "presenting-conference-talks",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "document",
+        "writing"
+      ]
+    },
+    {
+      "name": "research-paper-writing",
+      "description": "Write ML papers for NeurIPS/ICML/ICLR: design→submit.",
+      "path": "skills/paper-writing/research-paper-writing/SKILL.md",
+      "dirName": "research-paper-writing",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing"
+      ]
+    },
+    {
+      "name": "researchwrite",
+      "description": "Proposal-first scientific writing pipeline. Three modes (compose/revise/hybrid) with four-layer QA pipeline. Enforces evidence-before-prose, argument-before-sections, and contracts-before-paragraphs.",
+      "path": "skills/paper-writing/researchwrite/SKILL.md",
+      "dirName": "researchwrite",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing"
+      ]
+    },
+    {
+      "name": "systems-paper-writing",
+      "description": "Comprehensive guide for writing systems papers targeting OSDI, SOSP, ASPLOS, NSDI, and EuroSys. Provides paragraph-level structural blueprints, writing patterns, venue-specific checklists, reviewer guidelines, LaTeX templates, and conference deadlines. Use this skill for all systems conference paper writing.",
+      "path": "skills/paper-writing/systems-paper-writing/SKILL.md",
+      "dirName": "systems-paper-writing",
+      "category": "paper-writing",
+      "tags": [
+        "paper-writing",
+        "writing"
+      ]
+    },
+    {
+      "name": "resume-master",
+      "description": "通过直接编写可编辑的 HTML 源文件，来创建新简历或根据职位描述（JD）量身定制现有简历，最终交付可打印 PDF。当用户需要以下操作时使用：(1) 从头开始创建一份全新的简历；(2) 修改旧简历特别是根据 JD 进行调整。",
+      "path": "skills/productivity/resume-master/SKILL.md",
+      "dirName": "resume-master",
+      "category": "productivity",
+      "tags": [
+        "productivity",
+        "document"
+      ]
+    },
+    {
+      "name": "vetai-evaluation",
+      "description": "VetAI 评估体系（gold_standard / V1参考集 / 探针工具链）使用方法、指标口径与不可越过的边界。Use when 评估 vetai 诊断效果、跑审计、算一致率或写评估报告时。",
+      "path": "skills/project-vetai/vetai-evaluation/SKILL.md",
+      "dirName": "vetai-evaluation",
+      "category": "project-vetai",
+      "tags": [
+        "project-vetai",
+        "document"
+      ]
+    },
+    {
+      "name": "vetai-project-context",
+      "description": "VetAI 宠物皮肤初筛小程序项目背景、结构、测试命令与工作约定速查。Use when working on the vetai project, 修改 vetai 代码、跑测试、生成文档或交付文件时。",
+      "path": "skills/project-vetai/vetai-project-context/SKILL.md",
+      "dirName": "vetai-project-context",
+      "category": "project-vetai",
+      "tags": [
+        "project-vetai",
+        "document",
+        "dev-workflow"
+      ]
+    },
+    {
+      "name": "awq-quantization",
+      "description": "Activation-aware weight quantization for 4-bit LLM compression with 3x speedup and minimal accuracy loss. Use when deploying large models (7B-70B) on limited GPU memory, when you need faster inference than GPTQ with better accuracy preservation, or for instruction-tuned and multimodal models. MLSys 2024 Best Paper Award winner.",
+      "path": "skills/quantization-compression/awq-quantization/SKILL.md",
+      "dirName": "awq-quantization",
+      "category": "quantization-compression",
+      "tags": [
+        "quantization-compression",
+        "ai"
+      ]
+    },
+    {
+      "name": "gguf-quantization",
+      "description": "GGUF format and llama.cpp quantization for efficient CPU/GPU inference. Use when deploying models on consumer hardware, Apple Silicon, or when needing flexible quantization from 2-8 bit without GPU requirements.",
+      "path": "skills/quantization-compression/gguf-quantization/SKILL.md",
+      "dirName": "gguf-quantization",
+      "category": "quantization-compression",
+      "tags": [
+        "quantization-compression",
+        "other"
+      ]
+    },
+    {
+      "name": "gptq",
+      "description": "Post-training 4-bit quantization for LLMs with minimal accuracy loss. Use for deploying large models (70B, 405B) on consumer GPUs, when you need 4× memory reduction with <2% perplexity degradation, or for faster inference (3-4× speedup) vs FP16. Integrates with transformers and PEFT for QLoRA fine-tuning.",
+      "path": "skills/quantization-compression/gptq/SKILL.md",
+      "dirName": "gptq",
+      "category": "quantization-compression",
+      "tags": [
+        "quantization-compression",
+        "other"
+      ]
+    },
+    {
+      "name": "hqq-quantization",
+      "description": "Half-Quadratic Quantization for LLMs without calibration data. Use when quantizing models to 4/3/2-bit precision without needing calibration datasets, for fast quantization workflows, or when deploying with vLLM or HuggingFace Transformers.",
+      "path": "skills/quantization-compression/hqq-quantization/SKILL.md",
+      "dirName": "hqq-quantization",
+      "category": "quantization-compression",
+      "tags": [
+        "quantization-compression",
+        "data",
+        "automation"
+      ]
+    },
+    {
+      "name": "knowledge-distillation",
+      "description": "Compress large language models using knowledge distillation from teacher to student models. Use when deploying smaller models with retained performance, transferring GPT-4 capabilities to open-source models, or reducing inference costs. Covers temperature scaling, soft targets, reverse KLD, logit distillation, and MiniLLM training strategies.",
+      "path": "skills/quantization-compression/knowledge-distillation/SKILL.md",
+      "dirName": "knowledge-distillation",
+      "category": "quantization-compression",
+      "tags": [
+        "quantization-compression",
+        "other"
+      ]
+    },
+    {
+      "name": "model-merging",
+      "description": "Merge multiple fine-tuned models using mergekit to combine capabilities without retraining. Use when creating specialized models by blending domain-specific expertise (math + coding + chat), improving performance beyond single models, or experimenting rapidly with model variants. Covers SLERP, TIES-Merging, DARE, Task Arithmetic, linear merging, and production deployment strategies.",
+      "path": "skills/quantization-compression/model-merging/SKILL.md",
+      "dirName": "model-merging",
+      "category": "quantization-compression",
+      "tags": [
+        "quantization-compression",
+        "other"
+      ]
+    },
+    {
+      "name": "model-pruning",
+      "description": "Reduce LLM size and accelerate inference using pruning techniques like Wanda and SparseGPT. Use when compressing models without retraining, achieving 50% sparsity with minimal accuracy loss, or enabling faster inference on hardware accelerators. Covers unstructured pruning, structured pruning, N:M sparsity, magnitude pruning, and one-shot methods.",
+      "path": "skills/quantization-compression/model-pruning/SKILL.md",
+      "dirName": "model-pruning",
+      "category": "quantization-compression",
+      "tags": [
+        "quantization-compression",
+        "ai"
+      ]
+    },
+    {
+      "name": "quantizing-models-bitsandbytes",
+      "description": "Quantizes LLMs to 8-bit or 4-bit for 50-75% memory reduction with minimal accuracy loss. Use when GPU memory is limited, need to fit larger models, or want faster inference. Supports INT8, NF4, FP4 formats, QLoRA training, and 8-bit optimizers. Works with HuggingFace Transformers.",
+      "path": "skills/quantization-compression/quantizing-models-bitsandbytes/SKILL.md",
+      "dirName": "quantizing-models-bitsandbytes",
+      "category": "quantization-compression",
+      "tags": [
+        "quantization-compression",
+        "other"
+      ]
+    },
+    {
+      "name": "chroma",
+      "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source projects.",
+      "path": "skills/rag-vector/chroma/SKILL.md",
+      "dirName": "chroma",
+      "category": "rag-vector",
+      "tags": [
+        "rag-vector",
+        "other"
+      ]
+    },
+    {
+      "name": "faiss",
+      "description": "Facebook's library for efficient similarity search and clustering of dense vectors. Supports billions of vectors, GPU acceleration, and various index types (Flat, IVF, HNSW). Use for fast k-NN search, large-scale vector retrieval, or when you need pure similarity search without metadata. Best for high-performance applications.",
+      "path": "skills/rag-vector/faiss/SKILL.md",
+      "dirName": "faiss",
+      "category": "rag-vector",
+      "tags": [
+        "rag-vector",
+        "other"
+      ]
+    },
+    {
+      "name": "llamaindex",
+      "description": "Data framework for building LLM applications with RAG. Specializes in document ingestion (300+ connectors), indexing, and querying. Features vector indices, query engines, agents, and multi-modal support. Use for document Q&A, chatbots, knowledge retrieval, or building RAG pipelines. Best for data-centric LLM applications.",
+      "path": "skills/rag-vector/llamaindex/SKILL.md",
+      "dirName": "llamaindex",
+      "category": "rag-vector",
+      "tags": [
+        "rag-vector",
+        "data",
+        "ai"
+      ]
+    },
+    {
+      "name": "pinecone",
+      "description": "Managed vector database for production AI applications. Fully managed, auto-scaling, with hybrid search (dense + sparse), metadata filtering, and namespaces. Low latency (<100ms p95). Use for production RAG, recommendation systems, or semantic search at scale. Best for serverless, managed infrastructure.",
+      "path": "skills/rag-vector/pinecone/SKILL.md",
+      "dirName": "pinecone",
+      "category": "rag-vector",
+      "tags": [
+        "rag-vector",
+        "other"
+      ]
+    },
+    {
+      "name": "qdrant-vector-search",
+      "description": "High-performance vector similarity search engine for RAG and semantic search. Use when building production RAG systems requiring fast nearest neighbor search, hybrid search with filtering, or scalable vector storage with Rust-powered performance.",
+      "path": "skills/rag-vector/qdrant-vector-search/SKILL.md",
+      "dirName": "qdrant-vector-search",
+      "category": "rag-vector",
+      "tags": [
+        "rag-vector",
+        "other"
+      ]
+    },
+    {
+      "name": "sentence-transformers",
+      "description": "Framework for state-of-the-art sentence, text, and image embeddings. Provides 5000+ pre-trained models for semantic similarity, clustering, and retrieval. Supports multilingual, domain-specific, and multimodal models. Use for generating embeddings for RAG, semantic search, or similarity tasks. Best for production embedding generation.",
+      "path": "skills/rag-vector/sentence-transformers/SKILL.md",
+      "dirName": "sentence-transformers",
+      "category": "rag-vector",
+      "tags": [
+        "rag-vector",
+        "other"
+      ]
+    },
+    {
+      "name": "ara-compiler",
+      "description": "Compiles any research input — PDF papers, GitHub repositories, experiment logs, code directories, or raw notes — into a complete Agent-Native Research Artifact (ARA) with cognitive layer (claims, concepts, heuristics), physical layer (configs, code stubs), exploration graph, and grounded evidence. Use when ingesting a paper or codebase into a structured, machine-executable knowledge package, building an ARA from scratch, or converting research outputs into a falsifiable, agent-traversable form.",
+      "path": "skills/research-workflow/ara-compiler/SKILL.md",
+      "dirName": "ara-compiler",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "document",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "ara-research-manager",
+      "description": "Records research provenance as a post-task epilogue, scanning conversation history at the end of a coding or research session to extract decisions, experiments, dead ends, claims, heuristics, and pivots, and writing them into the ara/ directory with user-vs-AI provenance tags. Use as a session epilogue — never during execution — to maintain a faithful, auditable trace of how a research project actually evolved.",
+      "path": "skills/research-workflow/ara-research-manager/SKILL.md",
+      "dirName": "ara-research-manager",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "writing",
+        "automation"
+      ]
+    },
+    {
+      "name": "ara-rigor-reviewer",
+      "description": "Performs ARA Seal Level 2 semantic epistemic review on Agent-Native Research Artifacts, scoring six dimensions (evidence relevance, falsifiability, scope calibration, argument coherence, exploration integrity, methodological rigor) and producing a constructive, severity-ranked report with a Strong Accept-to-Reject recommendation. Use after Level 1 structural validation passes, when an ARA needs an objective epistemic critique before publication or release.",
+      "path": "skills/research-workflow/ara-rigor-reviewer/SKILL.md",
+      "dirName": "ara-rigor-reviewer",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "arxiv-search",
+      "description": "Search arXiv physics, math, and computer science preprints using natural language queries. Powered by Valyu semantic search.",
+      "path": "skills/research-workflow/arxiv-search/SKILL.md",
+      "dirName": "arxiv-search",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "automation"
+      ]
+    },
+    {
+      "name": "autoresearch",
+      "description": "Orchestrates end-to-end autonomous AI research projects using a two-loop architecture. The inner loop runs rapid experiment iterations with clear optimization targets. The outer loop synthesizes results, identifies patterns, and steers research direction. Routes to domain-specific skills for execution, supports continuous agent operation via Claude Code /loop and OpenClaw heartbeat, and produces research presentations and papers. Use when starting a research project, running autonomous experiments, or managing a multi-hypothesis research effort.",
+      "path": "skills/research-workflow/autoresearch/SKILL.md",
+      "dirName": "autoresearch",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "bgpt-paper-search",
+      "description": "Search scientific papers and retrieve structured experimental data extracted from full-text studies via the BGPT MCP server. Returns 25+ fields per paper including methods, results, sample sizes, quality scores, and conclusions. Use for literature reviews, evidence synthesis, and finding experimental details not available in abstracts alone.",
+      "path": "skills/research-workflow/bgpt-paper-search/SKILL.md",
+      "dirName": "bgpt-paper-search",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "data",
+        "automation"
+      ]
+    },
+    {
+      "name": "brainstorming-research-ideas",
+      "description": "Guides researchers through structured ideation frameworks to discover high-impact research directions. Use when exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work.",
+      "path": "skills/research-workflow/brainstorming-research-ideas/SKILL.md",
+      "dirName": "brainstorming-research-ideas",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "automation"
+      ]
+    },
+    {
+      "name": "creative-thinking-for-research",
+      "description": "Applies cognitive science frameworks for creative thinking to CS and AI research ideation. Use when seeking genuinely novel research directions by leveraging combinatorial creativity, analogical reasoning, constraint manipulation, and other empirically grounded creative strategies.",
+      "path": "skills/research-workflow/creative-thinking-for-research/SKILL.md",
+      "dirName": "creative-thinking-for-research",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "automation"
+      ]
+    },
+    {
+      "name": "deep-research",
+      "description": "Universal deep research agent team. 13-agent pipeline for rigorous academic research on any topic. 8 modes: full research, quick brief, paper review, lit-review, fact-check, three-way literature scan, Socratic guided research dialogue, and systematic review with optional meta-analysis. Covers research question formulation, Socratic mentoring, methodology design, systematic literature search, source verification, cross-source synthesis, risk of bias assessment, meta-analysis, APA 7.0 report compilation, editorial review, devil's advocate challenges, ethics review, and post-research literature monitoring. Triggers on: research, deep research, literature review, systematic review, meta-analysis, PRISMA, evidence synthesis, fact-check, WHY HOW WHAT papers, 3W literature scan, guide my research, help me think through, 研究, 深度研究, 文獻回顧, 文獻探討, 系統性回顧, 後設分析, 事實查核, 三段式文獻掃描, 引導我的研究, 幫我釐清, 幫我想想, 我不確定要研究什麼, 研究方向, 研究主題, 심층 연구, 문헌 조사, 체계적 문헌고찰, 메타분석, 사실 확인, 연구 방향을 잡아줘, 연구 주제 정하는 것을 도와줘.",
+      "path": "skills/research-workflow/deep-research/SKILL.md",
+      "dirName": "deep-research",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "data",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "patent-disclosure-skill",
+      "description": "中国专利：从项目文档挖掘专利点并生成可交付技术交底书（查新、脱敏成文、自检与迭代）；或将已有专利解读为通俗笔记与 Obsidian 知识图谱（叙事故事线、公开线索辅助）。| China patents: draft technical disclosures from project docs, or read existing patents into plain-language notes and an Obsidian knowledge graph.",
+      "path": "skills/research-workflow/patent-disclosure-skill/SKILL.md",
+      "dirName": "patent-disclosure-skill",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "document",
+        "automation"
+      ]
+    },
+    {
+      "name": "grpo-rl-training",
+      "description": "Expert guidance for GRPO/RL fine-tuning with TRL for reasoning and task-specific model training",
+      "path": "skills/rl-training/grpo-rl-training/SKILL.md",
+      "dirName": "grpo-rl-training",
+      "category": "rl-training",
+      "tags": [
+        "rl-training",
+        "other"
+      ]
+    },
+    {
+      "name": "miles-rl-training",
+      "description": "Provides guidance for enterprise-grade RL training using miles, a production-ready fork of slime. Use when training large MoE models with FP8/INT4, needing train-inference alignment, or requiring speculative RL for maximum throughput.",
+      "path": "skills/rl-training/miles-rl-training/SKILL.md",
+      "dirName": "miles-rl-training",
+      "category": "rl-training",
+      "tags": [
+        "rl-training",
+        "other"
+      ]
+    },
+    {
+      "name": "openrlhf-training",
+      "description": "High-performance RLHF framework with Ray+vLLM acceleration. Use for PPO, GRPO, RLOO, DPO training of large models (7B-70B+). Built on Ray, vLLM, ZeRO-3. 2× faster than DeepSpeedChat with distributed architecture and GPU resource sharing.",
+      "path": "skills/rl-training/openrlhf-training/SKILL.md",
+      "dirName": "openrlhf-training",
+      "category": "rl-training",
+      "tags": [
+        "rl-training",
+        "other"
+      ]
+    },
+    {
+      "name": "slime-rl-training",
+      "description": "Provides guidance for LLM post-training with RL using slime, a Megatron+SGLang framework. Use when training GLM models, implementing custom data generation workflows, or needing tight Megatron-LM integration for RL scaling.",
+      "path": "skills/rl-training/slime-rl-training/SKILL.md",
+      "dirName": "slime-rl-training",
+      "category": "rl-training",
+      "tags": [
+        "rl-training",
+        "data",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "torchforge-rl-training",
+      "description": "Provides guidance for PyTorch-native agentic RL using torchforge, Meta's library separating infra from algorithms. Use when you want clean RL abstractions, easy algorithm experimentation, or scalable training with Monarch and TorchTitan.",
+      "path": "skills/rl-training/torchforge-rl-training/SKILL.md",
+      "dirName": "torchforge-rl-training",
+      "category": "rl-training",
+      "tags": [
+        "rl-training",
+        "ai"
+      ]
+    },
+    {
+      "name": "verl-rl-training",
+      "description": "Provides guidance for training LLMs with reinforcement learning using verl (Volcano Engine RL). Use when implementing RLHF, GRPO, PPO, or other RL algorithms for LLM post-training at scale with flexible infrastructure backends.",
+      "path": "skills/rl-training/verl-rl-training/SKILL.md",
+      "dirName": "verl-rl-training",
+      "category": "rl-training",
+      "tags": [
+        "rl-training",
+        "ai"
+      ]
+    },
+    {
+      "name": "evaluating-cosmos-policy",
+      "description": "Evaluates NVIDIA Cosmos Policy on LIBERO and RoboCasa simulation environments. Use when setting up cosmos-policy for robot manipulation evaluation, running headless GPU evaluations with EGL rendering, or profiling inference latency on cluster or local GPU machines.",
+      "path": "skills/robotics/evaluating-cosmos-policy/SKILL.md",
+      "dirName": "evaluating-cosmos-policy",
+      "category": "robotics",
+      "tags": [
+        "robotics",
+        "other"
+      ]
+    },
+    {
+      "name": "fine-tuning-openvla-oft",
+      "description": "Fine-tunes and evaluates OpenVLA-OFT and OpenVLA-OFT+ policies for robot action generation with continuous action heads, LoRA adaptation, and FiLM conditioning on LIBERO simulation and ALOHA real-world setups. Use when reproducing OpenVLA-OFT paper results, training custom VLA action heads (L1 or diffusion), deploying server-client inference for ALOHA, or debugging normalization, LoRA merge, and cross-GPU issues.",
+      "path": "skills/robotics/fine-tuning-openvla-oft/SKILL.md",
+      "dirName": "fine-tuning-openvla-oft",
+      "category": "robotics",
+      "tags": [
+        "robotics",
+        "dev-workflow"
+      ]
+    },
+    {
+      "name": "fine-tuning-serving-openpi",
+      "description": "Fine-tune and serve Physical Intelligence OpenPI models (pi0, pi0-fast, pi0.5) using JAX or PyTorch backends for robot policy inference across ALOHA, DROID, and LIBERO environments. Use when adapting pi0 models to custom datasets, converting JAX checkpoints to PyTorch, running policy inference servers, or debugging norm stats and GPU memory issues.",
+      "path": "skills/robotics/fine-tuning-serving-openpi/SKILL.md",
+      "dirName": "fine-tuning-serving-openpi",
+      "category": "robotics",
+      "tags": [
+        "robotics",
+        "dev-workflow"
+      ]
+    },
+    {
+      "name": "constitutional-ai",
+      "description": "Anthropic's method for training harmless AI through self-improvement. Two-phase approach - supervised learning with self-critique/revision, then RLAIF (RL from AI Feedback). Use for safety alignment, reducing harmful outputs without human labels. Powers Claude's safety system.",
+      "path": "skills/safety-guardrails/constitutional-ai/SKILL.md",
+      "dirName": "constitutional-ai",
+      "category": "safety-guardrails",
+      "tags": [
+        "safety-guardrails",
+        "other"
+      ]
+    },
+    {
+      "name": "llamaguard",
+      "description": "Meta's 7-8B specialized moderation model for LLM input/output filtering. 6 safety categories - violence/hate, sexual content, weapons, substances, self-harm, criminal planning. 94-95% accuracy. Deploy with vLLM, HuggingFace, Sagemaker. Integrates with NeMo Guardrails.",
+      "path": "skills/safety-guardrails/llamaguard/SKILL.md",
+      "dirName": "llamaguard",
+      "category": "safety-guardrails",
+      "tags": [
+        "safety-guardrails",
+        "ai"
+      ]
+    },
+    {
+      "name": "nemo-guardrails",
+      "description": "NVIDIA's runtime safety framework for LLM applications. Features jailbreak detection, input/output validation, fact-checking, hallucination detection, PII filtering, toxicity detection. Uses Colang 2.0 DSL for programmable rails. Production-ready, runs on T4 GPU.",
+      "path": "skills/safety-guardrails/nemo-guardrails/SKILL.md",
+      "dirName": "nemo-guardrails",
+      "category": "safety-guardrails",
+      "tags": [
+        "safety-guardrails",
+        "ai"
+      ]
+    },
+    {
+      "name": "prompt-guard",
+      "description": "Meta's 86M prompt injection and jailbreak detector. Filters malicious prompts and third-party data for LLM apps. 99%+ TPR, <1% FPR. Fast (<2ms GPU). Multilingual (8 languages). Deploy with HuggingFace or batch processing for RAG security.",
+      "path": "skills/safety-guardrails/prompt-guard/SKILL.md",
+      "dirName": "prompt-guard",
+      "category": "safety-guardrails",
+      "tags": [
+        "safety-guardrails",
+        "data",
+        "automation",
+        "ai"
+      ]
+    },
+    {
+      "name": "deepspeed",
+      "description": "Expert guidance for distributed training with DeepSpeed - ZeRO optimization stages, pipeline parallelism, FP16/BF16/FP8, 1-bit Adam, sparse attention",
+      "path": "skills/training-infra/deepspeed/SKILL.md",
+      "dirName": "deepspeed",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "other"
+      ]
+    },
+    {
+      "name": "distributed-llm-pretraining-torchtitan",
+      "description": "Provides PyTorch-native distributed LLM pretraining using torchtitan with 4D parallelism (FSDP2, TP, PP, CP). Use when pretraining Llama 3.1, DeepSeek V3, or custom models at scale from 8 to 512+ GPUs with Float8, torch.compile, and distributed checkpointing.",
+      "path": "skills/training-infra/distributed-llm-pretraining-torchtitan/SKILL.md",
+      "dirName": "distributed-llm-pretraining-torchtitan",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "ai"
+      ]
+    },
+    {
+      "name": "huggingface-accelerate",
+      "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). Interactive config, single launch command. HuggingFace ecosystem standard.",
+      "path": "skills/training-infra/huggingface-accelerate/SKILL.md",
+      "dirName": "huggingface-accelerate",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "automation"
+      ]
+    },
+    {
+      "name": "implementing-llms-litgpt",
+      "description": "Implements and trains LLMs using Lightning AI's LitGPT with 20+ pretrained architectures (Llama, Gemma, Phi, Qwen, Mistral). Use when need clean model implementations, educational understanding of architectures, or production fine-tuning with LoRA/QLoRA. Single-file implementations, no abstraction layers.",
+      "path": "skills/training-infra/implementing-llms-litgpt/SKILL.md",
+      "dirName": "implementing-llms-litgpt",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "other"
+      ]
+    },
+    {
+      "name": "ml-training-recipes",
+      "description": "Battle-tested PyTorch training recipes for all domains — LLMs, vision, diffusion, medical imaging, protein/drug discovery, spatial omics, genomics. Covers training loops, optimizer selection (AdamW, Muon), LR scheduling, mixed precision, debugging, and systematic experimentation. Use when training or fine-tuning neural networks, debugging loss spikes or OOM, choosing architectures, or optimizing GPU throughput.",
+      "path": "skills/training-infra/ml-training-recipes/SKILL.md",
+      "dirName": "ml-training-recipes",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "dev-workflow"
+      ]
+    },
+    {
+      "name": "moe-training",
+      "description": "Train Mixture of Experts (MoE) models using DeepSpeed or HuggingFace. Use when training large-scale models with limited compute (5× cost reduction vs dense models), implementing sparse architectures like Mixtral 8x7B or DeepSeek-V3, or scaling model capacity without proportional compute increase. Covers MoE architectures, routing mechanisms, load balancing, expert parallelism, and inference optimization.",
+      "path": "skills/training-infra/moe-training/SKILL.md",
+      "dirName": "moe-training",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "other"
+      ]
+    },
+    {
+      "name": "nanogpt",
+      "description": "Educational GPT implementation in ~300 lines. Reproduces GPT-2 (124M) on OpenWebText. Clean, hackable code for learning transformers. By Andrej Karpathy. Perfect for understanding GPT architecture from scratch. Train on Shakespeare (CPU) or OpenWebText (multi-GPU).",
+      "path": "skills/training-infra/nanogpt/SKILL.md",
+      "dirName": "nanogpt",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "other"
+      ]
+    },
+    {
+      "name": "pytorch-fsdp2",
+      "description": "Adds PyTorch FSDP2 (fully_shard) to training scripts with correct init, sharding, mixed precision/offload config, and distributed checkpointing. Use when models exceed single-GPU memory or when you need DTensor-based sharding with DeviceMesh.",
+      "path": "skills/training-infra/pytorch-fsdp2/SKILL.md",
+      "dirName": "pytorch-fsdp2",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "other"
+      ]
+    },
+    {
+      "name": "pytorch-lightning",
+      "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. Use when you want clean training loops with built-in best practices.",
+      "path": "skills/training-infra/pytorch-lightning/SKILL.md",
+      "dirName": "pytorch-lightning",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "automation"
+      ]
+    },
+    {
+      "name": "ray-train",
+      "description": "Distributed training orchestration across clusters. Scales PyTorch/TensorFlow/HuggingFace from laptop to 1000s of nodes. Built-in hyperparameter tuning with Ray Tune, fault tolerance, elastic scaling. Use when training massive models across multiple machines or running distributed hyperparameter sweeps.",
+      "path": "skills/training-infra/ray-train/SKILL.md",
+      "dirName": "ray-train",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "other"
+      ]
+    },
+    {
+      "name": "training-llms-megatron",
+      "description": "Trains large language models (2B-462B parameters) using NVIDIA Megatron-Core with advanced parallelism strategies. Use when training models >1B parameters, need maximum GPU efficiency (47% MFU on H100), or require tensor/pipeline/sequence/context/expert parallelism. Production-ready framework used for Nemotron, LLaMA, DeepSeek.",
+      "path": "skills/training-infra/training-llms-megatron/SKILL.md",
+      "dirName": "training-llms-megatron",
+      "category": "training-infra",
+      "tags": [
+        "training-infra",
+        "other"
+      ]
+    }
+  ]
+}
