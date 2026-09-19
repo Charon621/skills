@@ -45,7 +45,7 @@ def first_sentence(text: str) -> str:
 
 CATEGORY_MEMBERS = {
     "学术写作与出版": {
-        "academic-paper", "academic-paper-reviewer", "academic-pipeline", "academic-plotting",
+        "academic-paper", "academic-paper-reviewer", "academic-paper-workflow", "academic-pipeline", "academic-plotting",
         "academic-writing-assistant", "citation-management", "cn-academic-paper-standards",
         "humanize-academic-writing", "ml-paper-writing", "nature-citation", "nature-data",
         "nature-experiment-log", "nature-figure", "nature-paper2ppt", "nature-polishing",
@@ -275,6 +275,7 @@ def write_catalog(rows: list[dict[str, object]]) -> None:
     task = "# 按任务找技能\n\n这页只放优先推荐。需要完整清单时看 [`技能总索引.md`](技能总索引.md)。\n\n"
     recommendations = [
         ("我想写论文、改稿、投稿", [
+            ("academic-paper-workflow", "端到端学术论文准备与撰写全流程工作流（带双门禁）"),
             ("nature-writing", "从材料起草或重建论文正文"),
             ("nature-polishing", "已有稿件的英文润色与重写"),
             ("academic-paper-reviewer", "投稿前模拟审稿"),

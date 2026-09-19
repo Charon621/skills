@@ -28,7 +28,7 @@
 
 | 分类 | 数量 | 示例 |
 |---|---:|---|
-| 学术写作与出版 | 25 | `academic-paper`、`academic-paper-reviewer`、`academic-pipeline`、`academic-plotting`、`academic-writing` |
+| 学术写作与出版 | 26 | `academic-paper`、`academic-paper-reviewer`、`academic-paper-workflow`、`academic-pipeline`、`academic-plotting` |
 | 文献检索与研究 | 11 | `arxiv-search`、`autoresearch`、`bgpt-paper-search`、`brainstorming-research-ideas`、`creative-thinking-for-research` |
 | 研究记录与知识产物 | 3 | `ara-compiler`、`ara-research-manager`、`ara-rigor-reviewer` |
 | 模型评测、安全与可观测 | 13 | `constitutional-ai`、`evaluating-code-models`、`evaluating-llms-harness`、`experiment-tracking-swanlab`、`langsmith-observability` |
