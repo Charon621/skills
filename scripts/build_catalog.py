@@ -46,12 +46,12 @@ def first_sentence(text: str) -> str:
 CATEGORY_MEMBERS = {
     "学术写作与出版": {
         "academic-paper", "academic-paper-reviewer", "academic-pipeline", "academic-plotting",
-        "academic-writing-assistant", "citation-management", "humanize-academic-writing",
-        "ml-paper-writing", "nature-citation", "nature-data", "nature-experiment-log",
-        "nature-figure", "nature-paper2ppt", "nature-polishing", "nature-ref-verifier",
-        "nature-response", "nature-reviewer", "nature-shared", "nature-statistics",
-        "nature-writing", "presenting-conference-talks", "research-paper-writing",
-        "researchwrite", "systems-paper-writing",
+        "academic-writing-assistant", "citation-management", "cn-academic-paper-standards",
+        "humanize-academic-writing", "ml-paper-writing", "nature-citation", "nature-data",
+        "nature-experiment-log", "nature-figure", "nature-paper2ppt", "nature-polishing",
+        "nature-ref-verifier", "nature-response", "nature-reviewer", "nature-shared",
+        "nature-statistics", "nature-writing", "presenting-conference-talks",
+        "research-paper-writing", "researchwrite", "systems-paper-writing",
     },
     "文献检索与研究": {
         "arxiv-search", "autoresearch", "bgpt-paper-search", "brainstorming-research-ideas",
@@ -155,7 +155,8 @@ KNOWN_SOURCES = {
 
 
 def source(author: str, name: str) -> str:
-    if name in {"vetai-project-context", "vetai-evaluation", "humanize-academic-writing"}:
+    if name in {"vetai-project-context", "vetai-evaluation", "humanize-academic-writing",
+                "cn-academic-paper-standards"}:
         return "个人维护"
     if name in KNOWN_SOURCES:
         return KNOWN_SOURCES[name]
