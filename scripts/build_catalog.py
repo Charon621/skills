@@ -234,6 +234,7 @@ def write_catalog(rows: list[dict[str, object]]) -> None:
         ("nature-reader", "精读一篇论文，保留图表、公式和原文位置"),
         ("nature-writing", "根据研究材料起草或重建论文正文"),
         ("humanize-academic-writing", "清理学术文本里的机械句式和 AI 痕迹"),
+        ("cn-academic-paper-standards", "按国标写中文论文、排三线表和参考文献"),
         ("citation-management", "管理 BibTeX、补引用、查重复和格式问题"),
         ("academic-paper-reviewer", "投稿前模拟多视角同行评审"),
         ("patent-disclosure-skill", "从项目材料挖专利点并写技术交底书"),
@@ -279,6 +280,7 @@ def write_catalog(rows: list[dict[str, object]]) -> None:
             ("academic-paper-reviewer", "投稿前模拟审稿"),
             ("nature-response", "写审稿回复和修订说明"),
             ("humanize-academic-writing", "清理明显的 AI 写作痕迹"),
+            ("cn-academic-paper-standards", "按国标（GB/T 7713.2、GB/T 7714）写中文论文并排版"),
             ("citation-management", "管理 BibTeX、查缺漏引用"),
         ]),
         ("我想查论文、做综述、精读文献", [

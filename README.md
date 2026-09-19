@@ -14,6 +14,7 @@
 | [`nature-reader`](skills/nature-reader/SKILL.md) | 精读一篇论文，保留图表、公式和原文位置 |
 | [`nature-writing`](skills/nature-writing/SKILL.md) | 根据研究材料起草或重建论文正文 |
 | [`humanize-academic-writing`](skills/humanize-academic-writing/SKILL.md) | 清理学术文本里的机械句式和 AI 痕迹 |
+| [`cn-academic-paper-standards`](skills/cn-academic-paper-standards/SKILL.md) | 按国标写中文论文、排三线表和参考文献 |
 | [`citation-management`](skills/citation-management/SKILL.md) | 管理 BibTeX、补引用、查重复和格式问题 |
 | [`academic-paper-reviewer`](skills/academic-paper-reviewer/SKILL.md) | 投稿前模拟多视角同行评审 |
 | [`patent-disclosure-skill`](skills/patent-disclosure-skill/SKILL.md) | 从项目材料挖专利点并写技术交底书 |
