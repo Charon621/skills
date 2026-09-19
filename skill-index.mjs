@@ -22,6 +22,7 @@ function parseArgs(argv) {
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === '--out') args.out = argv[++i] ?? null;
     else if (argv[i] === '--rules') args.rules = argv[++i] ?? null;
+    else if (argv[i] === '--labels') args.labels = argv[++i] ?? null;
     else args._.push(argv[i]);
   }
   return args;
@@ -139,7 +140,16 @@ async function loadRules(file) {
   }));
 }
 
-function enrich(skills, rules = null) {
+async function loadLabels(file) {
+  if (!file) return null;
+  const labels = JSON.parse(await fs.readFile(file, 'utf8'));
+  if (typeof labels !== 'object' || labels === null || Array.isArray(labels)) {
+    throw new Error('简介文件须为 { "技能名": "中文简介" } 对象');
+  }
+  return labels;
+}
+
+function enrich(skills, rules = null, labels = null) {
   const prefix = commonPrefix(skills.map(s => s.segments));
   for (const s of skills) {
     const rest = s.segments.slice(prefix.length);
@@ -153,6 +163,11 @@ function enrich(skills, rules = null) {
       const hit = rules.find(r => r.re.test(r.field === 'name' ? hay : `${hay} ${s.description.toLowerCase()} ${s.path.toLowerCase()}`));
       s.category = hit ? hit.category : null;
       s.tags = [hit ? hit.category : 'unmatched', ...s.tags.filter(t => t !== (hit?.category))];
+    }
+  }
+  if (labels) {
+    for (const s of skills) {
+      s.zh = labels[s.name] ?? labels[s.dirName] ?? null;
     }
   }
 }
@@ -185,7 +200,7 @@ const cell = (s, max = 160) => {
   return oneLine.length > max ? oneLine.slice(0, max - 1) + '…' : oneLine;
 };
 
-function buildIndexMd(root, skills, issues, rulesApplied = false) {
+function buildIndexMd(root, skills, issues, rulesApplied = false, scanCmd = `node skill-index.mjs scan ${root}`) {
   const fallbackKey = rulesApplied ? 'other ⚠（未匹配任何规则）' : 'other ✱';
   const groups = new Map();
   for (const s of skills) {
@@ -198,7 +213,7 @@ function buildIndexMd(root, skills, issues, rulesApplied = false) {
   const lines = [
     `# Skills Index`,
     '',
-    `> 由 skill-index.mjs 自动生成于 ${new Date().toISOString().slice(0, 10)}，请勿手改；重跑 \`node skill-index.mjs scan ${root}\` 更新。`,
+    `> 由 skill-index.mjs 自动生成于 ${new Date().toISOString().slice(0, 10)}，请勿手改；重跑 \`${scanCmd}\` 更新。`,
     '',
     `共 **${skills.length}** 个 skills，**${keys.length}** 个分组，检出 **${issues.length}** 个问题。`,
     '',
@@ -214,7 +229,7 @@ function buildIndexMd(root, skills, issues, rulesApplied = false) {
     lines.push(`## ${key} (${groups.get(key).length})`, '');
     lines.push('| Skill | 说明 | 路径 |', '| --- | --- | --- |');
     for (const s of groups.get(key)) {
-      const desc = cell(s.description || '（无 description）', 140).replace(/\|/g, '\\|');
+      const desc = cell(s.zh || s.description || '（无 description）', 140).replace(/\|/g, '\\|');
       lines.push(`| ${s.name} | ${desc} | \`${s.path}\` |`);
     }
     lines.push('');
@@ -230,14 +245,14 @@ function buildIndexMd(root, skills, issues, rulesApplied = false) {
   return lines.join('\n');
 }
 
-async function load(root, rulesFile = null) {
+async function load(root, rulesFile = null, labelsFile = null) {
   const { absRoot, skills } = await collectSkills(root);
-  enrich(skills, await loadRules(rulesFile));
+  enrich(skills, await loadRules(rulesFile), await loadLabels(labelsFile));
   return { absRoot, skills };
 }
 
-async function cmdScan(root, out, rulesFile) {
-  const { absRoot, skills } = await load(root, rulesFile);
+async function cmdScan(root, out, rulesFile, labelsFile) {
+  const { absRoot, skills } = await load(root, rulesFile, labelsFile);
   if (!skills.length) {
     console.log(red(`在 ${absRoot} 下没有找到任何 SKILL.md`));
     process.exitCode = 1;
@@ -246,8 +261,13 @@ async function cmdScan(root, out, rulesFile) {
   const issues = findIssues(skills);
   const outDir = path.resolve(out ?? absRoot);
   const rulesApplied = !!rulesFile;
+  const flags = [
+    rulesFile ? `--rules ${rulesFile}` : null,
+    labelsFile ? `--labels ${labelsFile}` : null,
+  ].filter(Boolean).join(' ');
+  const scanCmd = `node skill-index.mjs scan ${root}${flags ? ' ' + flags : ''}`;
   await fs.mkdir(outDir, { recursive: true });
-  await fs.writeFile(path.join(outDir, 'INDEX.md'), buildIndexMd(root, skills, issues, rulesApplied), 'utf8');
+  await fs.writeFile(path.join(outDir, 'INDEX.md'), buildIndexMd(root, skills, issues, rulesApplied, scanCmd), 'utf8');
   await fs.writeFile(
     path.join(outDir, 'skills.json'),
     JSON.stringify({
@@ -274,13 +294,13 @@ async function cmdScan(root, out, rulesFile) {
   }
 }
 
-async function cmdSearch(root, query, rulesFile) {
+async function cmdSearch(root, query, rulesFile, labelsFile) {
   if (!query.length) {
     console.log(red('用法: node skill-index.mjs search <repo-root> <关键词>...'));
     process.exitCode = 1;
     return;
   }
-  const { skills } = await load(root, rulesFile);
+  const { skills } = await load(root, rulesFile, labelsFile);
   const tokens = query.map(t => t.toLowerCase());
   const scored = [];
   for (const s of skills) {
@@ -288,7 +308,7 @@ async function cmdSearch(root, query, rulesFile) {
       name: s.name.toLowerCase(),
       dir: s.dirName.toLowerCase(),
       tags: s.tags.join(' ').toLowerCase(),
-      desc: s.description.toLowerCase(),
+      desc: `${s.description} ${s.zh ?? ''}`.toLowerCase(),
       path: s.path.toLowerCase(),
     };
     let score = 0, matchedAll = true;
@@ -313,7 +333,8 @@ async function cmdSearch(root, query, rulesFile) {
   console.log(dim(`匹配 ${scored.length} 个（显示前 20，全词命中优先）：`));
   for (const { s } of scored.slice(0, 20)) {
     console.log(`${bold(s.name)}  ${dim(s.path)}  [${s.tags.join(', ')}]`);
-    if (s.description) console.log(`  ${cell(s.description, 150)}`);
+    const desc = s.zh || s.description;
+    if (desc) console.log(`  ${cell(desc, 150)}`);
   }
 }
 
@@ -331,14 +352,14 @@ const args = parseArgs(process.argv.slice(2));
 const [cmd, root, ...rest] = args._;
 if (!cmd || !root) {
   console.log(`用法:
-  node skill-index.mjs scan <repo-root> [--out <dir>] [--rules <rules.json>]   生成 INDEX.md + skills.json
-  node skill-index.mjs search <repo-root> <关键词>... [--rules <rules.json>]    按关键词检索
+  node skill-index.mjs scan <repo-root> [--out <dir>] [--rules <rules.json>] [--labels <zh.json>]   生成 INDEX.md + skills.json
+  node skill-index.mjs search <repo-root> <关键词>... [--rules <rules.json>] [--labels <zh.json>]    按关键词检索
   node skill-index.mjs check <repo-root>                检查常见问题`);
   process.exitCode = cmd ? 1 : 0;
 } else if (cmd === 'scan') {
-  await cmdScan(root, args.out, args.rules);
+  await cmdScan(root, args.out, args.rules, args.labels);
 } else if (cmd === 'search') {
-  await cmdSearch(root, rest, args.rules);
+  await cmdSearch(root, rest, args.rules, args.labels);
 } else if (cmd === 'check') {
   await cmdCheck(root);
 } else {

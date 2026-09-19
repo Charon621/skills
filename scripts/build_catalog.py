@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -10,6 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / "skills"
 CATALOG = ROOT / "catalog"
+SUMMARY_ZH_PATH = Path(__file__).resolve().parent / "summaries-zh.json"
+SUMMARY_ZH: dict[str, str] = json.loads(SUMMARY_ZH_PATH.read_text(encoding="utf-8")) if SUMMARY_ZH_PATH.exists() else {}
 
 
 def frontmatter(text: str) -> str:
@@ -171,6 +174,7 @@ def read_skill(path: Path, category_dir: str) -> dict[str, object]:
         "category_dir": category_dir,
         "name": name,
         "description": first_sentence(description or "暂无说明"),
+        "summary": SUMMARY_ZH.get(path.name) or first_sentence(description or "暂无说明"),
         "author": author,
         "source": skill_source,
         "category": category,
@@ -221,22 +225,25 @@ def write_catalog(rows: list[dict[str, object]]) -> None:
         ("vetai-project-context", "查看 VetAI 仓库结构、测试命令和工作约定"),
     ]
     by_dir = {str(r["dir"]): r for r in usable}
-    readme = """# 技能库入口\n\n这里按“要做什么”找技能。技能按分类存放在 `skills/<分类>/<技能名>/`，分类目录与 [`catalog/`](catalog/技能总索引.md) 一一对应。\n\n## 独立维护的原创技能\n\n[`high-stakes-ai-evaluation`](https://github.com/Charon621/high-stakes-ai-evaluation)：检查医疗、法律、金融等高风险 AI 的效果声明能不能公开，并指出缺失证据。\n\n## 常用精选\n\n| 技能 | 适合做什么 |\n|---|---|\n"""
+    label_to_dir = {label: category_dir for category_dir, label in CATEGORY_LABELS.items()}
+    readme = """# 技能库入口\n\n按“要做什么”找技能。技能按分类存放在 `skills/<分类>/<技能名>/`，与下方中文分类一一对应。\n\n## 查找技能\n\n- **按任务**：[`catalog/按任务找.md`](catalog/按任务找.md) —— 按使用场景挑推荐技能\n- **按分类**：下方“完整分类”表，或 [`catalog/技能总索引.md`](catalog/技能总索引.md)（含每个技能的中文简介）\n- **按关键词**：`node skill-index.mjs search . <关键词> --rules ml-skills-rules.json --labels scripts/summaries-zh.json`（中英文均可，中文命中中文简介）\n\n## 常用精选\n\n| 技能 | 适合做什么 |\n|---|---|\n"""
     for name, note in featured:
         row = by_dir[name]
         readme += f"| {link(row).replace('../skills/', 'skills/')} | {note} |\n"
-    readme += "\n## 完整分类\n\n| 分类 | 数量 | 示例 |\n|---|---:|---|\n"
+    readme += "\n## 完整分类\n\n| 分类 | 数量 | 目录 | 示例 |\n|---|---:|---|---|\n"
     for category in order:
         items = categories.get(category, [])
         if not items:
             continue
         examples = "、".join(f"`{r['name']}`" for r in items[:5])
-        readme += f"| {category} | {len(items)} | {examples} |\n"
+        dir_name = label_to_dir[category]
+        dir_link = f"[`skills/{dir_name}/`](skills/{dir_name}/)"
+        readme += f"| {category} | {len(items)} | {dir_link} | {examples} |\n"
     readme += """
-完整清单见 [`catalog/技能总索引.md`](catalog/技能总索引.md)，按用户目标重排的入口见 [`catalog/按任务找.md`](catalog/按任务找.md)，来源和维护状态见 [`catalog/来源与待核对.md`](catalog/来源与待核对.md)。\n\n## 安装\n\n单个技能直接安装原始 `SKILL.md`（注意 URL 带分类目录）：\n\n```bash\nhermes skills install "https://raw.githubusercontent.com/Charon621/skills/main/skills/<分类>/<技能名>/SKILL.md" --yes\n```\n\n克隆后，按需把 `skills/<分类>/<技能名>/` 复制到当前 profile 的 `$HERMES_HOME/skills/`。\n\n## 维护\n\n技能按分类目录存放（22 个分类，清单与中文名见 `scripts/build_catalog.py` 的 `CATEGORY_ORDER` / `CATEGORY_LABELS`）。新增技能放进对应分类目录后运行：\n\n```bash\npython scripts/build_catalog.py\nnode skill-index.mjs scan . --rules ml-skills-rules.json\n```\n\n`skill-index.mjs` 额外生成机器可读的 `skills.json` 与 `INDEX.md`，并支持关键词检索：`node skill-index.mjs search . <关键词> --rules ml-skills-rules.json`。\n\n这个仓库同时包含社区技能、个人维护技能和项目专用技能。来源未标注或带项目路径的条目见待核对清单。\n"""
+完整清单见 [`catalog/技能总索引.md`](catalog/技能总索引.md)，按用户目标重排的入口见 [`catalog/按任务找.md`](catalog/按任务找.md)，来源和维护状态见 [`catalog/来源与待核对.md`](catalog/来源与待核对.md)。\n\n## 安装\n\n单个技能直接安装原始 `SKILL.md`（注意 URL 带分类目录）：\n\n```bash\nhermes skills install "https://raw.githubusercontent.com/Charon621/skills/main/skills/<分类>/<技能名>/SKILL.md" --yes\n```\n\n克隆后，按需把 `skills/<分类>/<技能名>/` 复制到当前 profile 的 `$HERMES_HOME/skills/`。\n\n## 维护\n\n技能按分类目录存放（22 个分类，清单与中文名见 `scripts/build_catalog.py` 的 `CATEGORY_ORDER` / `CATEGORY_LABELS`）。新增技能放进对应分类目录后运行：\n\n```bash\npython scripts/build_catalog.py\nnode skill-index.mjs scan . --rules ml-skills-rules.json --labels scripts/summaries-zh.json\n```\n\n`skill-index.mjs` 额外生成机器可读的 `skills.json` 与 `INDEX.md`，并支持关键词检索：`node skill-index.mjs search . <关键词> --rules ml-skills-rules.json --labels scripts/summaries-zh.json`。中文简介统一维护在 `scripts/summaries-zh.json`，新增技能时补一条即可。\n\n这个仓库同时包含社区技能、个人维护技能和项目专用技能。来源未标注或带项目路径的条目见待核对清单。\n"""
     (ROOT / "README.md").write_text(readme, encoding="utf-8")
 
-    index = "# 技能总索引\n\n共 **%d** 个技能。按主要用途排列；一个技能只放一个主类，避免同一条目在多个目录重复出现。\n\n" % len(usable)
+    index = "# 技能总索引\n\n共 **%d** 个技能。按分类目录排列；一个技能只放一个主类，避免同一条目在多个目录重复出现。\n\n" % len(usable)
     for category in order:
         items = categories.get(category, [])
         if not items:
@@ -244,7 +251,7 @@ def write_catalog(rows: list[dict[str, object]]) -> None:
         index += f"## {category}（{len(items)}）\n\n| 技能 | 用途简介 | 来源 | 备注 |\n|---|---|---|---|\n"
         for row in items:
             flags = "、".join(row["flags"]) if row["flags"] else ""
-            index += f"| {link(row)} | {row['description'].replace('|', '/')} | {row['source']} | {flags} |\n"
+            index += f"| {link(row)} | {str(row['summary']).replace('|', '/')} | {row['source']} | {flags} |\n"
         index += "\n"
     (CATALOG / "技能总索引.md").write_text(index, encoding="utf-8")
 

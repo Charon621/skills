@@ -1,10 +1,12 @@
 # 技能库入口
 
-这里按“要做什么”找技能。技能按分类存放在 `skills/<分类>/<技能名>/`，分类目录与 [`catalog/`](catalog/技能总索引.md) 一一对应。
+按“要做什么”找技能。技能按分类存放在 `skills/<分类>/<技能名>/`，与下方中文分类一一对应。
 
-## 独立维护的原创技能
+## 查找技能
 
-[`high-stakes-ai-evaluation`](https://github.com/Charon621/high-stakes-ai-evaluation)：检查医疗、法律、金融等高风险 AI 的效果声明能不能公开，并指出缺失证据。
+- **按任务**：[`catalog/按任务找.md`](catalog/按任务找.md) —— 按使用场景挑推荐技能
+- **按分类**：下方“完整分类”表，或 [`catalog/技能总索引.md`](catalog/技能总索引.md)（含每个技能的中文简介）
+- **按关键词**：`node skill-index.mjs search . <关键词> --rules ml-skills-rules.json --labels scripts/summaries-zh.json`（中英文均可，中文命中中文简介）
 
 ## 常用精选
 
@@ -26,30 +28,30 @@
 
 ## 完整分类
 
-| 分类 | 数量 | 示例 |
-|---|---:|---|
-| Nature 论文套件 | 18 | `nature-academic-search`、`nature-citation`、`nature-data`、`nature-downloader`、`nature-experiment-log` |
-| 论文写作与投稿 | 14 | `academic-paper`、`academic-paper-reviewer`、`academic-paper-workflow`、`academic-pipeline`、`academic-plotting` |
-| 文献检索与研究流程 | 10 | `ara-compiler`、`ara-research-manager`、`ara-rigor-reviewer`、`arxiv-search`、`autoresearch` |
-| 微调与对齐训练 | 6 | `axolotl`、`fine-tuning-with-trl`、`llama-factory`、`peft-fine-tuning`、`simpo-training` |
-| 强化学习训练 | 6 | `grpo-rl-training`、`miles-rl-training`、`openrlhf-training`、`slime-rl-training`、`torchforge-rl-training` |
-| 分布式训练基础设施 | 11 | `deepspeed`、`distributed-llm-pretraining-torchtitan`、`huggingface-accelerate`、`implementing-llms-litgpt`、`ml-training-recipes` |
-| 量化、压缩与合并 | 8 | `awq-quantization`、`gguf-quantization`、`gptq`、`hqq-quantization`、`knowledge-distillation` |
-| 推理部署与加速 | 6 | `llama-cpp`、`optimizing-attention-flash`、`serving-llms-vllm`、`sglang`、`speculative-decoding` |
-| 模型架构与分词 | 5 | `huggingface-tokenizers`、`long-context`、`mamba-architecture`、`rwkv-architecture`、`sentencepiece` |
-| RAG 与向量检索 | 6 | `chroma`、`faiss`、`llamaindex`、`pinecone`、`qdrant-vector-search` |
-| Agent 框架与结构化输出 | 8 | `autogpt-agents`、`crewai-multi-agent`、`dspy`、`evolving-ai-agents`、`guidance` |
-| 多模态与媒体生成 | 7 | `audiocraft-audio-generation`、`blip-2-vision-language`、`clip`、`llava`、`segment-anything-model` |
-| 机器人与具身策略 | 3 | `evaluating-cosmos-policy`、`fine-tuning-openvla-oft`、`fine-tuning-serving-openpi` |
-| 可解释性研究 | 4 | `nnsight-remote-interpretability`、`pyvene-interventions`、`sparse-autoencoder-training`、`transformer-lens-interpretability` |
-| 模型评测 | 3 | `evaluating-code-models`、`evaluating-llms-harness`、`nemo-evaluator-sdk` |
-| 安全与护栏 | 4 | `constitutional-ai`、`llamaguard`、`nemo-guardrails`、`prompt-guard` |
-| 实验跟踪与可观测 | 6 | `experiment-tracking-swanlab`、`langsmith-observability`、`mlflow`、`phoenix-observability`、`tensorboard` |
-| 数据处理与清洗 | 2 | `nemo-curator`、`ray-data` |
-| 云算力平台 | 3 | `lambda-labs-gpu-cloud`、`modal-serverless-gpu`、`skypilot-multi-cloud-orchestration` |
-| 学科知识 | 3 | `biology`、`statistics`、`veterinary` |
-| 职业与效率 | 1 | `resume-master` |
-| 项目专用（VetAI） | 2 | `vetai-evaluation`、`vetai-project-context` |
+| 分类 | 数量 | 目录 | 示例 |
+|---|---:|---|---|
+| Nature 论文套件 | 18 | [`skills/nature-suite/`](skills/nature-suite/) | `nature-academic-search`、`nature-citation`、`nature-data`、`nature-downloader`、`nature-experiment-log` |
+| 论文写作与投稿 | 14 | [`skills/paper-writing/`](skills/paper-writing/) | `academic-paper`、`academic-paper-reviewer`、`academic-paper-workflow`、`academic-pipeline`、`academic-plotting` |
+| 文献检索与研究流程 | 10 | [`skills/research-workflow/`](skills/research-workflow/) | `ara-compiler`、`ara-research-manager`、`ara-rigor-reviewer`、`arxiv-search`、`autoresearch` |
+| 微调与对齐训练 | 6 | [`skills/fine-tuning/`](skills/fine-tuning/) | `axolotl`、`fine-tuning-with-trl`、`llama-factory`、`peft-fine-tuning`、`simpo-training` |
+| 强化学习训练 | 6 | [`skills/rl-training/`](skills/rl-training/) | `grpo-rl-training`、`miles-rl-training`、`openrlhf-training`、`slime-rl-training`、`torchforge-rl-training` |
+| 分布式训练基础设施 | 11 | [`skills/training-infra/`](skills/training-infra/) | `deepspeed`、`distributed-llm-pretraining-torchtitan`、`huggingface-accelerate`、`implementing-llms-litgpt`、`ml-training-recipes` |
+| 量化、压缩与合并 | 8 | [`skills/quantization-compression/`](skills/quantization-compression/) | `awq-quantization`、`gguf-quantization`、`gptq`、`hqq-quantization`、`knowledge-distillation` |
+| 推理部署与加速 | 6 | [`skills/inference-serving/`](skills/inference-serving/) | `llama-cpp`、`optimizing-attention-flash`、`serving-llms-vllm`、`sglang`、`speculative-decoding` |
+| 模型架构与分词 | 5 | [`skills/model-architecture/`](skills/model-architecture/) | `huggingface-tokenizers`、`long-context`、`mamba-architecture`、`rwkv-architecture`、`sentencepiece` |
+| RAG 与向量检索 | 6 | [`skills/rag-vector/`](skills/rag-vector/) | `chroma`、`faiss`、`llamaindex`、`pinecone`、`qdrant-vector-search` |
+| Agent 框架与结构化输出 | 8 | [`skills/agent-frameworks/`](skills/agent-frameworks/) | `autogpt-agents`、`crewai-multi-agent`、`dspy`、`evolving-ai-agents`、`guidance` |
+| 多模态与媒体生成 | 7 | [`skills/multimodal-media/`](skills/multimodal-media/) | `audiocraft-audio-generation`、`blip-2-vision-language`、`clip`、`llava`、`segment-anything-model` |
+| 机器人与具身策略 | 3 | [`skills/robotics/`](skills/robotics/) | `evaluating-cosmos-policy`、`fine-tuning-openvla-oft`、`fine-tuning-serving-openpi` |
+| 可解释性研究 | 4 | [`skills/interpretability/`](skills/interpretability/) | `nnsight-remote-interpretability`、`pyvene-interventions`、`sparse-autoencoder-training`、`transformer-lens-interpretability` |
+| 模型评测 | 3 | [`skills/evaluation-benchmarks/`](skills/evaluation-benchmarks/) | `evaluating-code-models`、`evaluating-llms-harness`、`nemo-evaluator-sdk` |
+| 安全与护栏 | 4 | [`skills/safety-guardrails/`](skills/safety-guardrails/) | `constitutional-ai`、`llamaguard`、`nemo-guardrails`、`prompt-guard` |
+| 实验跟踪与可观测 | 6 | [`skills/observability-tracking/`](skills/observability-tracking/) | `experiment-tracking-swanlab`、`langsmith-observability`、`mlflow`、`phoenix-observability`、`tensorboard` |
+| 数据处理与清洗 | 2 | [`skills/data-engineering/`](skills/data-engineering/) | `nemo-curator`、`ray-data` |
+| 云算力平台 | 3 | [`skills/gpu-cloud/`](skills/gpu-cloud/) | `lambda-labs-gpu-cloud`、`modal-serverless-gpu`、`skypilot-multi-cloud-orchestration` |
+| 学科知识 | 3 | [`skills/domain-science/`](skills/domain-science/) | `biology`、`statistics`、`veterinary` |
+| 职业与效率 | 1 | [`skills/productivity/`](skills/productivity/) | `resume-master` |
+| 项目专用（VetAI） | 2 | [`skills/project-vetai/`](skills/project-vetai/) | `vetai-evaluation`、`vetai-project-context` |
 
 完整清单见 [`catalog/技能总索引.md`](catalog/技能总索引.md)，按用户目标重排的入口见 [`catalog/按任务找.md`](catalog/按任务找.md)，来源和维护状态见 [`catalog/来源与待核对.md`](catalog/来源与待核对.md)。
 
@@ -69,9 +71,9 @@ hermes skills install "https://raw.githubusercontent.com/Charon621/skills/main/s
 
 ```bash
 python scripts/build_catalog.py
-node skill-index.mjs scan . --rules ml-skills-rules.json
+node skill-index.mjs scan . --rules ml-skills-rules.json --labels scripts/summaries-zh.json
 ```
 
-`skill-index.mjs` 额外生成机器可读的 `skills.json` 与 `INDEX.md`，并支持关键词检索：`node skill-index.mjs search . <关键词> --rules ml-skills-rules.json`。
+`skill-index.mjs` 额外生成机器可读的 `skills.json` 与 `INDEX.md`，并支持关键词检索：`node skill-index.mjs search . <关键词> --rules ml-skills-rules.json --labels scripts/summaries-zh.json`。中文简介统一维护在 `scripts/summaries-zh.json`，新增技能时补一条即可。
 
 这个仓库同时包含社区技能、个人维护技能和项目专用技能。来源未标注或带项目路径的条目见待核对清单。
