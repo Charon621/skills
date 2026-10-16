@@ -36,6 +36,7 @@
   "ara-compiler": "把论文、仓库、实验日志等编译成 ARA 研究工件",
   "ara-research-manager": "在任务结束时记录研究过程与出处",
   "ara-rigor-reviewer": "对 ARA 工件做六维度严谨性评审",
+  "paper-visual-report": "检索论文与原图，核对实验边界，制作带完整摘要截图的离线 HTML 图文报告",
   "arxiv-search": "自然语言检索 arXiv 物理/数学/计算机预印本",
   "autoresearch": "双循环自主科研编排：快速实验内环 + 深度研究外环",
   "bgpt-paper-search": "检索论文并从全文抽取结构化实验数据",

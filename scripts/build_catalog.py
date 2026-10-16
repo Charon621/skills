@@ -134,7 +134,7 @@ KNOWN_SOURCES = {
 
 def source(author: str, name: str) -> str:
     if name in {"vetai-project-context", "vetai-evaluation", "humanize-academic-writing",
-                "cn-academic-paper-standards"}:
+                "cn-academic-paper-standards", "paper-visual-report"}:
         return "个人维护"
     if name in KNOWN_SOURCES:
         return KNOWN_SOURCES[name]
@@ -271,6 +271,7 @@ def write_catalog(rows: list[dict[str, object]]) -> None:
             ("nature-academic-search", "多源查文献并核验引用"),
             ("deep-research", "做完整研究或系统综述"),
             ("nature-reader", "精读一篇论文，保留图表和原文锚点"),
+            ("paper-visual-report", "制作带论文原图、完整摘要截图和来源链接的离线图文报告"),
             ("nature-paper-card", "把一篇论文整理成深读卡片"),
             ("nature-literature-pipeline", "从检索一路做到交付和归档"),
         ]),

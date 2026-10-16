@@ -1,0 +1,4 @@
+interface:
+  display_name: "论文图文报告"
+  short_description: "检索论文、核对证据、截取完整摘要，制作可离线阅读的图文研究报告"
+  default_prompt: "使用 $paper-visual-report 研究这个技术主题，制作带论文原图、完整摘要截图和来源链接的图文报告。"

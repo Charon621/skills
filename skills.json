@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T08:53:49.114Z",
-  "root": "C:\\Users\\Administrator\\ZCodeProject\\skills",
-  "count": 136,
+  "generatedAt": "2026-10-16T11:19:29.102Z",
+  "root": ".",
+  "count": 137,
   "skills": [
     {
       "name": "autogpt-agents",
@@ -1264,6 +1264,18 @@
         "automation",
         "ai"
       ]
+    },
+    {
+      "name": "paper-visual-report",
+      "description": "Research a technical topic through primary papers and produce an illustrated, source-linked report with paper figures, complete title-and-abstract captures, and a self-contained offline HTML deliverable. Use for research explainers, technology histories, and paper comparisons; respect an explicitly requested presentation or document format.",
+      "path": "skills/research-workflow/paper-visual-report/SKILL.md",
+      "dirName": "paper-visual-report",
+      "category": "research-workflow",
+      "tags": [
+        "research-workflow",
+        "automation"
+      ],
+      "zh": "检索论文与原图，核对实验边界，制作带完整摘要截图的离线 HTML 图文报告"
     },
     {
       "name": "patent-disclosure-skill",

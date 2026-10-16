@@ -32,7 +32,7 @@
 |---|---:|---|---|
 | Nature 论文套件 | 18 | [`skills/nature-suite/`](skills/nature-suite/) | `nature-academic-search`、`nature-citation`、`nature-data`、`nature-downloader`、`nature-experiment-log` |
 | 论文写作与投稿 | 14 | [`skills/paper-writing/`](skills/paper-writing/) | `academic-paper`、`academic-paper-reviewer`、`academic-paper-workflow`、`academic-pipeline`、`academic-plotting` |
-| 文献检索与研究流程 | 10 | [`skills/research-workflow/`](skills/research-workflow/) | `ara-compiler`、`ara-research-manager`、`ara-rigor-reviewer`、`arxiv-search`、`autoresearch` |
+| 文献检索与研究流程 | 11 | [`skills/research-workflow/`](skills/research-workflow/) | `ara-compiler`、`ara-research-manager`、`ara-rigor-reviewer`、`arxiv-search`、`autoresearch` |
 | 微调与对齐训练 | 6 | [`skills/fine-tuning/`](skills/fine-tuning/) | `axolotl`、`fine-tuning-with-trl`、`llama-factory`、`peft-fine-tuning`、`simpo-training` |
 | 强化学习训练 | 6 | [`skills/rl-training/`](skills/rl-training/) | `grpo-rl-training`、`miles-rl-training`、`openrlhf-training`、`slime-rl-training`、`torchforge-rl-training` |
 | 分布式训练基础设施 | 11 | [`skills/training-infra/`](skills/training-infra/) | `deepspeed`、`distributed-llm-pretraining-torchtitan`、`huggingface-accelerate`、`implementing-llms-litgpt`、`ml-training-recipes` |

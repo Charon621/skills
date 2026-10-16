@@ -17,7 +17,7 @@
   { "category": "gpu-cloud",                 "match": "lambda|modal|skypilot", "field": "name" },
   { "category": "data-engineering",          "match": "curator|ray-data", "field": "name" },
   { "category": "interpretability",          "match": "nnsight|pyvene|autoencoder|transformer.?lens|interpretability", "field": "name" },
-  { "category": "research-workflow",         "match": "arxiv|bgpt|deep-research|brainstorm|creative|autoresearch|\\bara-|patent", "field": "name" },
+  { "category": "research-workflow",         "match": "paper-visual-report|arxiv|bgpt|deep-research|brainstorm|creative|autoresearch|\\bara-|patent", "field": "name" },
   { "category": "paper-writing",             "match": "academic|paper|citation|conference|writ", "field": "name" },
   { "category": "domain-science",            "match": "biology|statistics|veterinary", "field": "name" },
   { "category": "productivity",              "match": "resume", "field": "name" }

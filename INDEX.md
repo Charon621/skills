@@ -1,8 +1,8 @@
 # Skills Index
 
-> 由 skill-index.mjs 自动生成于 2026-09-19，请勿手改；重跑 `node skill-index.mjs scan .` 更新。
+> 由 skill-index.mjs 自动生成于 2026-10-16，请勿手改；重跑 `node skill-index.mjs scan .` 更新。
 
-共 **136** 个 skills，**22** 个分组，检出 **0** 个问题。
+共 **137** 个 skills，**22** 个分组，检出 **0** 个问题。
 
 > 分组来自自定义规则文件，按 first-match 顺序匹配 name/description。
 
@@ -193,7 +193,7 @@
 | qdrant-vector-search | High-performance vector similarity search engine for RAG and semantic search. Use when building production RAG systems requiring fast neare… | `skills/rag-vector/qdrant-vector-search/SKILL.md` |
 | sentence-transformers | Framework for state-of-the-art sentence, text, and image embeddings. Provides 5000+ pre-trained models for semantic similarity, clustering,… | `skills/rag-vector/sentence-transformers/SKILL.md` |
 
-## research-workflow (10)
+## research-workflow (11)
 
 | Skill | 说明 | 路径 |
 | --- | --- | --- |
@@ -206,6 +206,7 @@
 | brainstorming-research-ideas | Guides researchers through structured ideation frameworks to discover high-impact research directions. Use when exploring new problem space… | `skills/research-workflow/brainstorming-research-ideas/SKILL.md` |
 | creative-thinking-for-research | Applies cognitive science frameworks for creative thinking to CS and AI research ideation. Use when seeking genuinely novel research direct… | `skills/research-workflow/creative-thinking-for-research/SKILL.md` |
 | deep-research | Universal deep research agent team. 13-agent pipeline for rigorous academic research on any topic. 8 modes: full research, quick brief, pap… | `skills/research-workflow/deep-research/SKILL.md` |
+| paper-visual-report | 检索论文与原图，核对实验边界，制作带完整摘要截图的离线 HTML 图文报告 | `skills/research-workflow/paper-visual-report/SKILL.md` |
 | patent-disclosure-skill | 中国专利：从项目文档挖掘专利点并生成可交付技术交底书（查新、脱敏成文、自检与迭代）；或将已有专利解读为通俗笔记与 Obsidian 知识图谱（叙事故事线、公开线索辅助）。\| China patents: draft technical disclosures from proj… | `skills/research-workflow/patent-disclosure-skill/SKILL.md` |
 
 ## rl-training (6)
